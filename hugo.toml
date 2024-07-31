@@ -159,6 +159,8 @@ weight = 3
 url = "docs/Kashmira_CV.pdf"
 
 [[languages.en.menu.main]]
-name = "Contact me"
-weight = 5
-url = "contactMe/"
+name = "Contact"
+weight = 7
+url = "contact/"
+
+
