@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vibhor Kashmira</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Vibhor Kashmira</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 Jul 2024 17:27:54 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact Me</title>
+      <link>http://localhost:1313/contactme/</link>
+      <pubDate>Wed, 31 Jul 2024 17:27:54 +0530</pubDate>
+      <guid>http://localhost:1313/contactme/</guid>
+      <description> Contact Information Link to heading Email Address: vibhorkashmira@gmail.com Phone Number: +1 (313) 746 0667 LinkedIn Profile: Vibhor Kashmira GitHub Profile: bellerophon95 Git Pages: bellerophon95.github.io Location: Detroit, MI </description>
+    </item>
+    <item>
+      <title>Project Rentaroost</title>
+      <link>http://localhost:1313/rentaroost/</link>
+      <pubDate>Wed, 31 Jul 2024 16:29:49 +0530</pubDate>
+      <guid>http://localhost:1313/rentaroost/</guid>
+      <description>Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.&#xA;Features Link to heading Integration with Stripe API&#xA;Secure and reliable payment processing upon booking. Real-time payment confirmation.&#xA;Dynamic Pricing&#xA;Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.</description>
+    </item>
+  </channel>
+</rss>
