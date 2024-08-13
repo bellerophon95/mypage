@@ -2,21 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://bellerophon95.github.io/mypage/contact/</loc>
     <lastmod>2024-07-31T23:28:26+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
+  </url>
+  <url>
+    <loc>https://bellerophon95.github.io/mypage/</loc>
     <lastmod>2024-07-31T23:28:26+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/rentaroost/</loc>
+  </url>
+  <url>
+    <loc>https://bellerophon95.github.io/mypage/rentaroost/</loc>
     <lastmod>2024-07-31T16:29:49+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/series/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+  </url>
+  <url>
+    <loc>https://bellerophon95.github.io/mypage/authors/</loc>
+  </url>
+  <url>
+    <loc>https://bellerophon95.github.io/mypage/categories/</loc>
+  </url>
+  <url>
+    <loc>https://bellerophon95.github.io/mypage/series/</loc>
+  </url>
+  <url>
+    <loc>https://bellerophon95.github.io/mypage/tags/</loc>
   </url>
 </urlset>
