@@ -1,4 +1,4 @@
-baseURL = "http://www.example.com"
+baseURL = "https://bellerophon95.github.io/mypage/"
 title = "Vibhor Kashmira"
 theme = "hugo-coder"
 languageCode = "en"
@@ -162,5 +162,9 @@ url = "docs/Kashmira_CV.pdf"
 name = "Contact"
 weight = 7
 url = "contact/"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
 
 

@@ -4,25 +4,33 @@
   <url>
     <loc>https://bellerophon95.github.io/mypage/contact/</loc>
     <lastmod>2024-07-31T23:28:26+05:30</lastmod>
-  </url>
-  <url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://bellerophon95.github.io/mypage/</loc>
     <lastmod>2024-07-31T23:28:26+05:30</lastmod>
-  </url>
-  <url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://bellerophon95.github.io/mypage/rentaroost/</loc>
     <lastmod>2024-07-31T16:29:49+05:30</lastmod>
-  </url>
-  <url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://bellerophon95.github.io/mypage/authors/</loc>
-  </url>
-  <url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://bellerophon95.github.io/mypage/categories/</loc>
-  </url>
-  <url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://bellerophon95.github.io/mypage/series/</loc>
-  </url>
-  <url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://bellerophon95.github.io/mypage/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
