@@ -154,11 +154,6 @@ weight = 1
 url = "rentaroost/"
 
 [[languages.en.menu.main]]
-name = "Resume"
-weight = 3
-url = "docs/Kashmira_CV.pdf"
-
-[[languages.en.menu.main]]
 name = "Contact"
 weight = 7
 url = "contact/"
