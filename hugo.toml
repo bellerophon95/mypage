@@ -21,7 +21,7 @@ author = "Vibhor Kashmira"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Vibhor Kashmira's personal website"
 keywords = "developer,data-intensive, data intensive, backend, frontend"
-info = ["Innovative software engineer with well-rounded cross-stack expertise specializing in frontend performance optimization as well as event-driven backend systems and data-intensive applications."]
+info = ["Innovative software engineer with well-rounded cross-stack expertise specializing in frontend performance optimization, event-driven backend systems and data-intensive applications."]
 avatarURL = "images/bevis.png"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
