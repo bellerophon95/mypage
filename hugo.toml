@@ -19,8 +19,8 @@ noClasses = false
 [params]
 author = "Vibhor Kashmira"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Vibhor Kashmira's personal website"
-keywords = "developer,data-intensive, data intensive, backend, frontend"
+description = "Vibhor Kashmira is a Fullstack Software Engineer specializing in event-driven backend systems, data-intensive applications, and frontend performance optimization."
+keywords = "Vibhor Kashmira, Fullstack Engineer, Backend Developer, Applied AI Engineer, AWS EKS, Kafka, GraphQL, Spring Boot, React"
 info = ["Innovative software engineer with well-rounded cross-stack expertise. Specializing in frontend performance optimization, event-driven backend systems and data-intensive applications."]
 avatarURL = "images/bevis.png"
 #gravatar = "john.doe@example.com"
@@ -128,7 +128,6 @@ customRemoteJS = []
 
 [taxonomies]
 category = "categories"
-series = "series"
 tag = "tags"
 author = "authors"
 

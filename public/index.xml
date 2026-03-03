@@ -1,26 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vibhor Kashmira</title>
-    <link>https://bellerophon95.github.io/mypage/</link>
-    <description>Recent content on Vibhor Kashmira</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 31 Jul 2024 23:28:26 +0530</lastBuildDate>
-    <atom:link href="https://bellerophon95.github.io/mypage/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://bellerophon95.github.io/mypage/contact/</link>
-      <pubDate>Wed, 31 Jul 2024 23:28:26 +0530</pubDate>
-      <guid>https://bellerophon95.github.io/mypage/contact/</guid>
-      <description> Contact Information Link to heading Email Address: vibhorkashmira@gmail.com Phone Number: +1 (313) 746 0667 LinkedIn Profile: Vibhor Kashmira GitHub Profile: bellerophon95 Git Pages: bellerophon95.github.io Location: Detroit, MI </description>
-    </item>
-    <item>
-      <title>Project Rentaroost</title>
-      <link>https://bellerophon95.github.io/mypage/rentaroost/</link>
-      <pubDate>Wed, 31 Jul 2024 16:29:49 +0530</pubDate>
-      <guid>https://bellerophon95.github.io/mypage/rentaroost/</guid>
-      <description>Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.&#xA;Features Link to heading Integration with Stripe API&#xA;Secure and reliable payment processing upon booking. Real-time payment confirmation.&#xA;Dynamic Pricing&#xA;Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vibhor Kashmira</title><link>https://bellerophon95.github.io/mypage/</link><description>Recent content on Vibhor Kashmira</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 31 Jul 2024 23:28:26 +0530</lastBuildDate><atom:link href="https://bellerophon95.github.io/mypage/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://bellerophon95.github.io/mypage/contact/</link><pubDate>Wed, 31 Jul 2024 23:28:26 +0530</pubDate><guid>https://bellerophon95.github.io/mypage/contact/</guid><description>&lt;h2 id="contact-information"&gt;
+ Contact Information
+ &lt;a class="heading-link" href="#contact-information"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Email Address:&lt;/strong&gt; &lt;a href="mailto:vibhorkashmira@gmail.com" &gt;vibhorkashmira@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Phone Number:&lt;/strong&gt; +1 (313) 746 0667&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LinkedIn Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/in/vibhor-kashmira-1b875689/" class="external-link" target="_blank" rel="noopener"&gt;Vibhor Kashmira&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Profile:&lt;/strong&gt; &lt;a href="https://github.com/bellerophon95" class="external-link" target="_blank" rel="noopener"&gt;bellerophon95&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git Pages:&lt;/strong&gt; &lt;a href="https://bellerophon95.github.io/mypage/" class="external-link" target="_blank" rel="noopener"&gt;bellerophon95.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Detroit, MI&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Project Rentaroost</title><link>https://bellerophon95.github.io/mypage/rentaroost/</link><pubDate>Wed, 31 Jul 2024 16:29:49 +0530</pubDate><guid>https://bellerophon95.github.io/mypage/rentaroost/</guid><description>&lt;p&gt;Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.&lt;/p&gt;
+&lt;h2 id="features"&gt;
+ Features
+ &lt;a class="heading-link" href="#features"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Integration with Stripe API&lt;/strong&gt;&lt;br&gt;
+Secure and reliable payment processing upon booking. Real-time payment confirmation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dynamic Pricing&lt;/strong&gt;&lt;br&gt;
+Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.&lt;/p&gt;</description></item><item><title/><link>https://bellerophon95.github.io/mypage/miniprojects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bellerophon95.github.io/mypage/miniprojects/</guid><description/></item></channel></rss>
