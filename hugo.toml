@@ -148,6 +148,11 @@ languageName = ":uk:"
 
 
 [[languages.en.menu.main]]
+name = "Project Nexus"
+weight = 0
+url = "nexus/"
+
+[[languages.en.menu.main]]
 name = "Project Rentaroost"
 weight = 1
 url = "rentaroost/"
