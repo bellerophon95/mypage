@@ -4,7 +4,7 @@ title = "Nexus: Multi-Agent RAG Intelligence"
 date = 2026-03-31T08:45:00+05:30
 +++
 
-> **[🚀 Launch Live Demo](https://nexus-ai-platform.vercel.app)** &nbsp; | &nbsp; **[📁 View Source](https://github.com/bellerophon95/nexus)**
+> **[🚀 Launch Live Demo](https://project-nexus.duckdns.org/)** &nbsp; | &nbsp; **[📁 View Source](https://github.com/bellerophon95/nexus)**
 
 Nexus is a production-grade **Multi-Agent Research Intelligence Platform** built to solve the "Black Box" problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
 
@@ -63,4 +63,4 @@ Nexus demonstrates the transition from "Simple RAG" to "Agentic RAG." It moves b
 
 ---
 
-*Explore the code on [GitHub](https://github.com/bellerophon95/nexus) or visit the [Live Demo](https://nexus-ai-platform.vercel.app).*
+*Explore the code on [GitHub](https://github.com/bellerophon95/nexus) or visit the [Live Demo](https://project-nexus.duckdns.org/).*
