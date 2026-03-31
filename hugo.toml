@@ -149,22 +149,22 @@ languageName = ":uk:"
 
 [[languages.en.menu.main]]
 name = "Project Nexus"
-weight = 0
+weight = 1
 url = "nexus/"
 
 [[languages.en.menu.main]]
 name = "Project Rentaroost"
-weight = 1
+weight = 2
 url = "rentaroost/"
 
 [[languages.en.menu.main]]
 name = "Resume"
-weight = 1
+weight = 3
 url = "docs/kashmira__.pdf"
 
 [[languages.en.menu.main]]
 name = "Contact"
-weight = 7
+weight = 4
 url = "contact/"
 
 [sitemap]
