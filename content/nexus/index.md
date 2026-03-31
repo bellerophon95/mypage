@@ -4,9 +4,14 @@ title = "Nexus: Multi-Agent RAG Intelligence"
 date = 2026-03-31T08:45:00+05:30
 +++
 
+> **[🚀 Launch Live Demo](https://nexus-ai-platform.vercel.app)** &nbsp; | &nbsp; **[📁 View Source](https://github.com/bellerophon95/nexus)**
+
 Nexus is a production-grade **Multi-Agent Research Intelligence Platform** built to solve the "Black Box" problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
 
-## key features
+![Nexus Chat Interface](/mypage/images/projects/nexus-ui.png)
+*Figure 1: The Nexus Chat Interface featuring real-time Agent Flow visualization and glassmorphic telemetry.*
+
+## ⚡ Key Features
 
 1. **Adaptive Multi-Agent Orchestration**  
    Autonomous transitions between **Retriever**, **Analyst**, and **Validator** nodes managed by LangGraph. Each step is observable in real-time, surfacing the system's "inner monologue."
@@ -20,24 +25,36 @@ Nexus is a production-grade **Multi-Agent Research Intelligence Platform** built
 4. **Engine Tuning Interface**  
    Dynamic runtime adjustment of `match_threshold`, `rerank` sensitivity, and `max_iterations`, allowing users to balance speed versus grounding depth.
 
-## Architecture
+![Nexus Knowledge Hub](/mypage/images/projects/nexus-hub.png)
+*Figure 2: The Knowledge Hub dashboard for document ingestion and intelligence grounding.*
 
-1. **Next.js 15 & React 19 Frontend**  
-   A high-performance "Glassmorphic" interface featuring real-time SSE streaming for token-by-token generation and agentic step visualization.
+## 🧬 Architecture
 
-2. **FastAPI & Python 12 Backend**  
-   Containerized orchestrator managing the multi-agent graph, vector database connections, and semantic caching layers.
+Nexus utilizes a modern, edge-ready stack designed for high throughput and low-latency retrieval.
 
-3. **Hybrid retrieval with Qdrant**  
-   Uses dual-vector indexing to combine the strengths of keyword matching (BM25/Splade) with semantic similarity.
+<details>
+<summary><b>Click to Expand: Technical Stack Details</b></summary>
 
-4. **Semantic Caching with Upstash Redis**  
-   Reduces LLM costs and latency by caching semantically similar queries before hitting the inference layer.
+- **Frontend**: Next.js 15 (App Router) + React 19 (Server Components)
+- **Backend Orchestration**: FastAPI + LangGraph + Pydantic AI
+- **Vector Intelligence**: Qdrant Cloud (Hybrid Search: Dense + Sparse)
+- **Primary Persistence**: Supabase (Postgres)
+- **Semantic Caching**: Upstash Redis (High-speed vector caching)
+- **Observability**: Langfuse (Tracing, Evals, Cost Calculation)
+</details>
 
-5. **Observability Stack**  
-   Integrated with **Langfuse** for production-grade tracing and **RAGAS** for automated evaluation of retrieval quality and faithfulness.
+## 🔍 The Agentic Advantage
 
-## Technical Gory Details
+Unlike traditional RAG systems that follow a linear path, Nexus agents can **loop and self-correct**. If the `Validator` agent determines that the `Analyst`'s response isn't sufficiently grounded in the retrieved documents, it triggers a new retrieval cycle with a refined query.
+
+### Real-Time Telemetry Snapshot
+| Metric | Performance Target | methodology |
+| :--- | :--- | :--- |
+| **Grounding (Faithfulness)** | > 0.95 | LLM-as-a-Judge validation |
+| **Response Latency** | < 1.5s | Semantic caching & streaming SSE |
+| **Token Utilization** | Optimized | Dynamic context window trimming |
+
+## 🛠️ Technical Gory Details
 
 - **SSE (Server-Sent Events) Stream**: A robust protocol that multiplexes text tokens, activity logs, and final metrics into a single persistent connection.
 - **Cross-Encoder Reranking**: Utilizes `BGE-Reranker-v2-m3` to eliminate noisy retrieval candidates, improving the signal-to-noise ratio for the synthesis agent.
@@ -47,4 +64,6 @@ Nexus is a production-grade **Multi-Agent Research Intelligence Platform** built
 
 Nexus demonstrates the transition from "Simple RAG" to "Agentic RAG." It moves beyond basic document retrieval into a stateful, observable, and self-correcting intelligence layer capable of handling complex research tasks with verified citations and professional-grade transparency.
 
-For more details, please visit the [Nexus Repository](https://github.com/bellerophon95/nexus).
+---
+
+*Explore the code on [GitHub](https://github.com/bellerophon95/nexus) or visit the [Live Demo](https://nexus-ai-platform.vercel.app).*
