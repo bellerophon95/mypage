@@ -8,6 +8,9 @@ date = 2026-03-31T08:45:00+05:30
 
 Nexus is a production-grade **Multi-Agent Research Intelligence Platform** built to solve the "Black Box" problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
 
+![Project Nexus Interface](/mypage/images/projects/nexus-interface.png)
+*Figure 1: The Nexus Multi-Agent Lab showing real-time agentic reasoning, trace metrics, and citation logic.*
+
 ## ⚡ Key Features
 
 1. **Adaptive Multi-Agent Orchestration**  
