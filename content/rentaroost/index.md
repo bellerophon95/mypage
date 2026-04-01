@@ -17,6 +17,58 @@ Rent-a-Roost is an Airbnb clone that allows users to view listings and book them
 3. **Push Notifications**  
    Users receive notifications for successful payments, bookings, and price drops. Real-time updates keep users informed and engaged.
 
+## System Design
+
+<div class="mermaid">
+graph TD
+    User([User / Next.js Frontend])
+    
+    subgraph "API Layer"
+        GQL[GraphQL API / Netflix DGS]
+    end
+    
+    subgraph "Write Path (Saga Pattern)"
+        WebFlux[Spring WebFlux]
+        Kafka[Apache Kafka]
+        Saga[Saga Orchestrator]
+        Mongo[(MongoDB)]
+    end
+    
+    subgraph "Read Path (gRPC CQRS)"
+        gRPC[Unary gRPC Service]
+    end
+    
+    subgraph "Dynamic Pricing Engine"
+        Flink[Apache Flink]
+        Redis[(Redis Cache)]
+    end
+    
+    subgraph "Notifications"
+        FCM[Firebase Cloud Messaging]
+    end
+
+    User -->|Queries/Mutations| GQL
+    GQL -->|Command| WebFlux
+    WebFlux -->|Events| Kafka
+    Kafka -->|Orchestrate| Saga
+    Saga -->|Update| Mongo
+    
+    GQL -->|Query| gRPC
+    gRPC -->|Fetch| Mongo
+    
+    Kafka -->|Stream Views/Bookings| Flink
+    Flink -->|Calc Deltas| Redis
+    Redis -.->|TTL Expire / PubSub| FCM
+    FCM -->|Push Notifications| User
+    
+    style User fill:#2d3436,stroke:#00cec9,stroke-width:2px,color:#fff
+    style Mongo fill:#2d3436,stroke:#55efc4,stroke-width:2px,color:#fff
+    style Redis fill:#2d3436,stroke:#ff7675,stroke-width:2px,color:#fff
+    style Kafka fill:#2d3436,stroke:#a29bfe,stroke-width:2px,color:#fff
+    style GQL fill:#2d3436,stroke:#fdcb6e,stroke-width:2px,color:#fff
+    style Flink fill:#2d3436,stroke:#e84393,stroke-width:2px,color:#fff
+</div>
+
 ## Architecture
 
 1. **GraphQL with Netflix DGS**  
