@@ -19,7 +19,7 @@ Rent-a-Roost is an Airbnb clone that allows users to view listings and book them
 
 ## System Design
 
-![Rentaroost System Architecture](/mypage/images/projects/rentaroost-architecture.png)
+[System Architecture Diagram coming soon]
 
 ## Architecture
 
