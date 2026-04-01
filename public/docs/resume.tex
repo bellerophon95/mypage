@@ -1,0 +1,135 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% \input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
+
+% \pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{1pt}\item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt, parsep=0pt, topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Vibhor Kashmira} \\ \vspace{1pt}
+    \small Detroit, Michigan $|$ +1 (313) 746 0667 $|$ \href{mailto:vibhorkashmira@gmail.com}{\underline{vibhorkashmira@gmail.com}} $|$ \href{https://bellerophon95.github.io/mypage/}{\underline{bellerophon95.github.io/mypage}}
+\end{center}
+
+\section{Professional Summary}
+\vspace{1pt}
+\small{Applied AI Engineer specializing in agentic execution engines and high-scale distributed systems. Expert in bridging the gap between experimental LLM orchestration and enterprise-grade backend reliability. Optimized context management for \textbf{60\% token reduction} and architected resilient, multi-agent orchestration layers on Kubernetes for mission-critical AI workloads.}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Applied AI Engineer}{Aug 2025 -- Present}
+      {Vizly}{Southfield, MI}
+      \resumeItemListStart
+        \resumeItem{\textbf{Agentic Orchestration:} Architecting an \textbf{n8n-based execution engine} with Reasoning \& Action components. Developed \textbf{Recursive Fallback Drivers} for autonomous action layers to ensure deterministic reliability.}
+        \resumeItem{\textbf{Context Optimization:} Resolved LLM ``Context Pollution'' via a late-binding \textbf{``Shared Blackboard''} (Supabase), reducing token usage by \textbf{60\%} and decoupling heavy datasets from prompt payloads.}
+        \resumeItem{\textbf{AI Infrastructure:} Engineered a low-latency \textbf{RPC server} to stream large S3 datasets to JupyterHub; deployed on \textbf{AWS EKS} with Prometheus/Grafana monitoring for real-time throughput.}
+        \resumeItem{\textbf{MCP Development:} Deployed a \textbf{Model Context Protocol (MCP)} Server with FastAPI, enabling AI Agents to securely execute isolated data analysis workloads on remote infrastructure.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{Jun 2017 -- Jun 2023}
+      {Sprinklr Inc}{Gurugram, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Strategic Migration:} Led migration of legacy feed APIs to \textbf{GraphQL}, achieving 15\% reduction in response time and 25\% decrease in network payload at enterprise scale.}
+        \resumeItem{\textbf{Event-Driven Architecture:} Engineered a high-scale system using \textbf{Kafka}, processing \textbf{10,000+ messages/sec} with end-to-end observability and event tracing.}
+        \resumeItem{\textbf{Performance Engineering:} Achieved 10\% responsiveness gain via \textbf{gRPC} inter-service communication and Reactive principles (\textbf{Spring WebFlux}).}
+        \resumeItem{\textbf{Data Strategy:} Optimized MongoDB via progressive sharding and indexing, reducing query latency by 15\% for the Engagement feed and 14 key Governance asset classes.}
+        \resumeItem{\textbf{Site Reliability:} Achieved \textbf{99.9\% availability} across K8s environments; established automated testing with Gatling and REST Assured via Jenkins CI/CD.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Nexus (Multi-Agent RAG Lab)} $|$ \textbf{Live Demo:} \href{https://project-nexus.duckdns.org/}{\underline{project-nexus.duckdns.org}}}{May 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Architected a production-grade \textbf{Multi-Agent engine} using \textbf{LangGraph} with autonomous \textbf{Self-RAG} loops where Validator nodes trigger iterative retrieval for grounding verification.}
+            \resumeItem{Engineered a high-precision retrieval pipeline combining \textbf{Qdrant Hybrid Search} (Dense + Sparse) with a \textbf{BGE-Reranker-v2} service, optimizing retrieval signal-to-noise for complex synthesis.}
+            \resumeItem{Established observability with \textbf{Langfuse} and \textbf{RAGAS}: real-time SSE streaming of agent inner monologue and automated hallucination/relevance scoring.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Rentaroost (Streaming AI Real Estate Platform)}}{Jan 2024 -- Mar 2024}
+          \resumeItemListStart
+            \resumeItem{Engineered a real-time dynamic pricing pipeline using \textbf{Apache Kafka} and \textbf{Apache Flink} to stream predictive features into a latent ranking model for live property valuation.}
+            \resumeItem{Optimized for sub-100ms pricing adjustments via \textbf{gRPC} for low-latency feature retrieval and high-throughput event processing.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0in, label={}, itemsep=0pt]
+    \small{\item{
+     \textbf{AI/LLM}{: LangGraph, RAG (Semantic Search), Qdrant, RAGAS, Cross-Encoders, Langfuse, MCP, Vercel AI SDK} \\[1pt]
+     \textbf{Backend}{: Python (FastAPI), Java (Spring Boot), gRPC, Kafka, Apache Flink, GraphQL, Spring WebFlux} \\[1pt]
+     \textbf{Infrastructure}{: AWS (EKS, S3, Lambda), Kubernetes (K8s), Docker, Redis, MongoDB, Supabase, CI/CD} \\[1pt]
+     \textbf{Observability}{: Langfuse (AI Tracing), Grafana, Prometheus, ELK Stack, ZSTD Compression, Event Tracing}
+    }}
+ \end{itemize}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Wayne State University}{Dec 2024}
+      {Master of Science in Computer Science (Dean's List)}{Detroit, MI}
+    \resumeSubheading
+      {The LNMIIT}{May 2017}
+      {Bachelor of Technology in Computer Science}{Jaipur, India}
+  \resumeSubHeadingListEnd
+
+\end{document}

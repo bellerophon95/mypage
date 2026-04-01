@@ -17,7 +17,7 @@ contentDir = "content"
 noClasses = false
 
 [markup.goldmark.renderer]
-unsafe = true
+# unsafe = true
 
 [params]
 author = "Vibhor Kashmira"
