@@ -21,30 +21,30 @@ Rent-a-Roost is an Airbnb clone that allows users to view listings and book them
 
 <div class="mermaid">
 graph TD
-    User([User / Next.js Frontend])
+    User(["User / Next.js Frontend"])
     
     subgraph "API Layer"
-        GQL[GraphQL API / Netflix DGS]
+        GQL["GraphQL API / Netflix DGS"]
     end
     
     subgraph "Write Path (Saga Pattern)"
-        WebFlux[Spring WebFlux]
-        Kafka[Apache Kafka]
-        Saga[Saga Orchestrator]
-        Mongo[(MongoDB)]
+        WebFlux["Spring WebFlux"]
+        Kafka["Apache Kafka"]
+        Saga["Saga Orchestrator"]
+        Mongo[("MongoDB")]
     end
     
-    subgraph "Read Path (gRPC CQRS)"
-        gRPC[Unary gRPC Service]
+    subgraph "Read Path (CQRS)"
+        gRPC["Unary gRPC Service"]
     end
     
     subgraph "Dynamic Pricing Engine"
-        Flink[Apache Flink]
-        Redis[(Redis Cache)]
+        Flink["Apache Flink"]
+        Redis[("Redis Cache")]
     end
     
     subgraph "Notifications"
-        FCM[Firebase Cloud Messaging]
+        FCM["Firebase Cloud Messaging"]
     end
 
     User -->|Queries/Mutations| GQL
