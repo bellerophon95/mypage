@@ -17,9 +17,7 @@ Rent-a-Roost is an Airbnb clone that allows users to view listings and book them
 3. **Push Notifications**  
    Users receive notifications for successful payments, bookings, and price drops. Real-time updates keep users informed and engaged.
 
-## System Design
 
-[System Architecture Diagram coming soon]
 
 ## Architecture
 
