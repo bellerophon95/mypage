@@ -38,19 +38,19 @@ Nexus is a production-grade Multi-Agent Research Intelligence Platform built to 
 ## Screenshots
 
 ### Multi-Agent Lab
-![Lab Dashboard](https://bellerophon95.github.io/mypage/images/nexus/dashboard.png)
-*Real-time agent state and citation grounding — visible as it happens.*
+![Lab Dashboard](/images/nexus/dashboard.png)
+*Real-time agentic reasoning, trace metrics, and citation grounding — visible as it happens.*
 
 ### Knowledge Ingestion
-![Knowledge Hub](https://bellerophon95.github.io/mypage/images/nexus/knowledge-base.png)
-*The Knowledge Hub for automated document ingestion and semantic chunking.*
+![Knowledge Hub](/images/nexus/knowledge-base.png)
+*The Automated Knowledge Hub for document ingestion and semantic chunking.*
 
 ### Observability Interface
-![Chat Interface](https://bellerophon95.github.io/mypage/images/nexus/chat-interface.png)
+![Chat Interface](/images/nexus/chat-interface.png)
 *Explainable AI responses with deep trace visibility and evaluation scores.*
 
 ### Engine Configuration
-![Engine Settings](https://bellerophon95.github.io/mypage/images/nexus/settings.png)
+![Engine Settings](/images/nexus/settings.png)
 *Runtime controls for adjusting retrieval sensitivity and agent behavior.*
 
 ## Conclusion
