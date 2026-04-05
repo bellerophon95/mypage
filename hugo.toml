@@ -5,8 +5,6 @@ languageCode = "en"
 defaultContentLanguage = "en"
 paginate = 6
 enableEmoji = true
-canonifyURLs = true
-relativeURLs = true
 
 contentDir = "content"
 
