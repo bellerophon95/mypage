@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "custom.css",
+	"sourceRoot": "/Users/vibhorkashmira/Github/mypage",
+	"sources": [
+		"assets/scss/custom.scss"
+	],
+	"sourcesContent": [
+		"img {\n  max-width: 100%;\n  height: auto;\n  display: block;\n  margin: 1.5rem 0;\n  border-radius: 8px; /* Optional premium touch */\n  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Light shadow for depth */\n}\n\n/* Ensure figure captions are also handled if used */\nfigure {\n  margin: 2rem 0;\n}\n\nfigcaption {\n  text-align: center;\n  font-style: italic;\n  font-size: 0.9rem;\n  margin-top: 0.5rem;\n  color: #888;\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,QAAQ;EAChB,aAAa,EAAE,GAAG;EAAE,4BAA4B;EAChD,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,mBAAgB;EAAE,4BAA4B,EACtE;;AAED,qDAAqD;AACrD,AAAA,MAAM,CAAC;EACL,MAAM,EAAE,MAAM,GACf;;AAED,AAAA,UAAU,CAAC;EACT,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI,GACZ"
+}

@@ -1,0 +1,28 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto; /* Centered images */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Fix for the 'Link to heading' text artifact from the theme's render-hooks */
+.sr-only,
+a[href^="#"] span {
+  display: none;
+}
+
+/* Ensure figure captions are also handled if used */
+figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #888;
+}
