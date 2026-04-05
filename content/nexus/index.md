@@ -49,9 +49,13 @@ Nexus is a production-grade Multi-Agent Research Intelligence Platform built to 
 ![Chat Interface](/mypage/images/nexus/chat-interface.png)
 *Explainable AI responses with deep trace visibility and evaluation scores.*
 
-### Engine Configuration
-![Engine Settings](/mypage/images/nexus/settings.png)
-*Runtime controls for adjusting retrieval sensitivity and agent behavior.*
+### Agent Skills Hub
+![Skills Hub](/mypage/images/nexus/skills-hub.png)
+*The Agent Skills Hub for managing custom tool integrations and reasoning capabilities.*
+
+### Engine Tuning
+![Engine Configuration](/mypage/images/nexus/engine-tuning.png)
+*Runtime controls for adjusting retrieval sensitivity and agent reasoning depth.*
 
 ## Conclusion
 
