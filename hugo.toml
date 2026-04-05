@@ -129,10 +129,10 @@ customRemoteJS = []
 # # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
 # connectsrc = ["'self'", "https://www.google-analytics.com"]
 
-[taxonomies]
-category = "categories"
-tag = "tags"
-author = "authors"
+# [taxonomies]
+# category = "categories"
+# tag = "tags"
+# author = "authors"
 
 [[params.social]]
 name = "Github"
@@ -175,3 +175,11 @@ url = "contact/"
   priority = 0.5
 
 
+
+[taxonomies]
+  tag = ""
+  category = ""
+  series = ""
+
+# Disable empty taxonomy pages and other unused auto-generated content
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
