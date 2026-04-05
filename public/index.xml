@@ -1,42 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vibhor Kashmira</title><link>https://bellerophon95.github.io/mypage/</link><description>Recent content on Vibhor Kashmira</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 31 Mar 2026 08:45:00 +0530</lastBuildDate><atom:link href="https://bellerophon95.github.io/mypage/index.xml" rel="self" type="application/rss+xml"/><item><title>Project Nexus</title><link>https://bellerophon95.github.io/mypage/nexus/</link><pubDate>Tue, 31 Mar 2026 08:45:00 +0530</pubDate><guid>https://bellerophon95.github.io/mypage/nexus/</guid><description>&lt;p&gt;Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the &amp;ldquo;Black Box&amp;rdquo; problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://project-nexus.duckdns.org/" class="external-link" target="_blank" rel="noopener"&gt;🚀 Launch Live Demo&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="features"&gt;
- Features
- &lt;a class="heading-link" href="#features"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Hybrid Search + Cross-Encoder Reranking&lt;/strong&gt;&lt;br&gt;
-The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.&lt;/p&gt;</description></item><item><title/><link>https://bellerophon95.github.io/mypage/contact/</link><pubDate>Wed, 31 Jul 2024 23:28:26 +0530</pubDate><guid>https://bellerophon95.github.io/mypage/contact/</guid><description>&lt;h2 id="contact-information"&gt;
- Contact Information
- &lt;a class="heading-link" href="#contact-information"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Email Address:&lt;/strong&gt; &lt;a href="mailto:vibhorkashmira@gmail.com" &gt;vibhorkashmira@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Phone Number:&lt;/strong&gt; +1 (313) 746 0667&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;LinkedIn Profile:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/in/vibhor-kashmira-1b875689/" class="external-link" target="_blank" rel="noopener"&gt;Vibhor Kashmira&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Profile:&lt;/strong&gt; &lt;a href="https://github.com/bellerophon95" class="external-link" target="_blank" rel="noopener"&gt;bellerophon95&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git Pages:&lt;/strong&gt; &lt;a href="https://bellerophon95.github.io/mypage/" class="external-link" target="_blank" rel="noopener"&gt;bellerophon95.github.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Detroit, MI&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Project Rentaroost</title><link>https://bellerophon95.github.io/mypage/rentaroost/</link><pubDate>Wed, 31 Jul 2024 16:29:49 +0530</pubDate><guid>https://bellerophon95.github.io/mypage/rentaroost/</guid><description>&lt;p&gt;Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.&lt;/p&gt;
-&lt;h2 id="features"&gt;
- Features
- &lt;a class="heading-link" href="#features"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Integration with Stripe API&lt;/strong&gt;&lt;br&gt;
-Secure and reliable payment processing upon booking. Real-time payment confirmation.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Dynamic Pricing&lt;/strong&gt;&lt;br&gt;
-Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.&lt;/p&gt;</description></item><item><title/><link>https://bellerophon95.github.io/mypage/miniprojects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bellerophon95.github.io/mypage/miniprojects/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vibhor Kashmira</title>
+    <link>http://localhost:1313/mypage/</link>
+    <description>Recent content on Vibhor Kashmira</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Mar 2026 08:45:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/mypage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Nexus</title>
+      <link>http://localhost:1313/mypage/nexus/</link>
+      <pubDate>Tue, 31 Mar 2026 08:45:00 +0530</pubDate>
+      <guid>http://localhost:1313/mypage/nexus/</guid>
+      <description>&lt;p&gt;Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the &amp;ldquo;Black Box&amp;rdquo; problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://project-nexus.duckdns.org/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;🚀 Launch Live Demo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;&#xA;  Features&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#features&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Hybrid Search + Cross-Encoder Reranking&lt;/strong&gt;&lt;br&gt;&#xA;The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/mypage/contact/</link>
+      <pubDate>Wed, 31 Jul 2024 23:28:26 +0530</pubDate>
+      <guid>http://localhost:1313/mypage/contact/</guid>
+      <description>&lt;h2 id=&#34;contact-information&#34;&gt;&#xA;  Contact Information&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#contact-information&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email Address:&lt;/strong&gt; &lt;a href=&#34;mailto:vibhorkashmira@gmail.com&#34; &gt;vibhorkashmira@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Phone Number:&lt;/strong&gt; +1 (313) 746 0667&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn Profile:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/vibhor-kashmira-1b875689/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vibhor Kashmira&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub Profile:&lt;/strong&gt; &lt;a href=&#34;https://github.com/bellerophon95&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bellerophon95&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Git Pages:&lt;/strong&gt; &lt;a href=&#34;https://bellerophon95.github.io/mypage/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bellerophon95.github.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Detroit, MI&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Project Rentaroost</title>
+      <link>http://localhost:1313/mypage/rentaroost/</link>
+      <pubDate>Wed, 31 Jul 2024 16:29:49 +0530</pubDate>
+      <guid>http://localhost:1313/mypage/rentaroost/</guid>
+      <description>&lt;p&gt;Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;&#xA;  Features&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#features&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Integration with Stripe API&lt;/strong&gt;&lt;br&gt;&#xA;Secure and reliable payment processing upon booking. Real-time payment confirmation.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Dynamic Pricing&lt;/strong&gt;&lt;br&gt;&#xA;Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/mypage/miniprojects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mypage/miniprojects/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
