@@ -1,64 +1,100 @@
-+++
-title = "Project Nexus"
-date = 2026-03-31T08:45:00+05:30
-+++
+---
+title: "Nexus: Multi-Agent RAG Intelligence"
+date: 2025-01-01
+draft: false
+slug: "nexus"
+description: "A production-grade Multi-Agent Research Intelligence Platform that makes RAG transparent, observable, and self-correcting."
+tags: ["AI", "RAG", "LangGraph", "FastAPI", "Next.js", "Qdrant", "Langfuse"]
+---
 
-Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the "Black Box" problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
+> **[🚀 Launch Live Demo](https://project-nexus.duckdns.org/)**  &nbsp;|&nbsp;  **[📁 View Source](https://github.com/bellerophon95/nexus)**
 
-[🚀 Launch Live Demo](https://project-nexus.duckdns.org/)
+---
 
-## Features
+## The Problem
 
-1. **Hybrid Search + Cross-Encoder Reranking**  
-   The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.
+Most RAG systems are black boxes. You ask a question, get an answer, and have no idea whether the system actually found relevant documents, hallucinated connections, or silently dropped critical context along the way. When the stakes are high—research, compliance, decision support—"trust me" isn't good enough.
 
-2. **Stateful Multi-Agent Loop**  
-   The agents are managed by LangGraph as a directed cyclic graph — not a linear chain. Three nodes (Retriever, Analyst, and Validator) manage the research flow. If the Validator determines that a response isn't sufficiently grounded, it triggers a new retrieval cycle with a refined query.
+**Nexus was built to fix that.**
 
-3. **Real-Time Observability**  
-   Every agent transition, token consumed, and evaluation score streams to the client over a single SSE connection. The UI shows the live process graph updating node-by-node, alongside per-turn latency, token costs, faithfulness scores, and guardrail status.
+It's a production-grade Multi-Agent Research Intelligence Platform where every retrieval decision, every reranking score, and every synthesis step is surfaced in real-time. No hidden reasoning. No unexplainable answers.
 
-## Architecture
+{{< figure src="/mypage/images/nexus/dashboard.png" title="The Nexus Multi-Agent Lab Dashboard — real-time agentic reasoning, trace metrics, and citation logic at a glance." >}}
 
-1. **Next.js 15 & React 19**  
-   User-facing interface built with a streaming-first rendering model that perfectly aligns with the Server-Sent Events (SSE) architecture for real-time updates.
+---
 
-2. **FastAPI + LangGraph**  
-   Backend orchestration layer providing an async-native, type-safe environment for managing complex agentic workflows and multi-node state transitions.
+## How It Works
 
-3. **Qdrant Cloud**  
-   Used as the primary vector intelligence layer, supporting native hybrid search (dense + sparse) in a single unified query for maximum retrieval precision.
+Nexus doesn't follow the traditional retrieve-then-generate pipeline. Instead, it deploys a team of specialized agents that collaborate, challenge each other, and self-correct.
 
-4. **Supabase & Redis**  
-   PostgreSQL manages document metadata and ingestion history, while Upstash Redis provides high-speed semantic caching to reduce latency on repeated queries.
+### The Agent Trio
 
-5. **Langfuse**  
-   Full-stack tracing and observability. Surfacing per-turn latency, token costs, and automated evaluation metrics (Faithfulness and Relevance) directly in the research dashboard.
+**Retriever** — Executes hybrid search across Qdrant's sparse (keyword) and dense (semantic) indices. Top-K candidates are re-scored through a Cross-Encoder Reranker (`BGE-Reranker-v2-m3`) to eliminate noise and maximize precision.
 
-## Screenshots
+**Analyst** — Synthesizes retrieved documents into a coherent, cited response. Every claim is grounded in specific source passages.
 
-### Multi-Agent Lab
-![Lab Dashboard](/mypage/images/nexus/dashboard.png)
-*Real-time agentic reasoning, trace metrics, and citation grounding — visible as it happens.*
+**Validator** — The internal skeptic. Reviews the Analyst's output against source documents. If grounding falls below threshold, it triggers a new retrieval cycle with a refined query. This self-correcting loop is what separates Nexus from simple RAG.
 
-### Knowledge Ingestion
-![Knowledge Hub](/mypage/images/nexus/knowledge-base.png)
-*The Automated Knowledge Hub for document ingestion and semantic chunking.*
+All three agents are orchestrated by **LangGraph**, with autonomous state transitions and observable decision points at every step.
 
-### Observability Interface
-![Chat Interface](/mypage/images/nexus/chat-interface.png)
-*Explainable AI responses with deep trace visibility and evaluation scores.*
+{{< figure src="/mypage/images/nexus/knowledge-base.png" title="The Automated Knowledge Hub — document ingestion and semantic chunking." >}}
 
-### Agent Skills Hub
-![Skills Hub](/mypage/images/nexus/skills-hub.png)
-*The Agent Skills Hub for managing custom tool integrations and reasoning capabilities.*
+---
 
-### Engine Tuning
-![Engine Configuration](/mypage/images/nexus/engine-tuning.png)
-*Runtime controls for adjusting retrieval sensitivity and agent reasoning depth.*
+## What You Can See (That Other RAG Systems Hide)
 
-## Conclusion
+Nexus integrates **Langfuse** for full-stack observability, surfacing metrics that are typically buried:
 
-Nexus demonstrates the transition from "Simple RAG" to "Agentic RAG." It moves beyond basic document retrieval into a stateful, observable, and self-correcting intelligence layer capable of handling complex research tasks with verified citations and professional-grade transparency.
+| What's Tracked | Why It Matters |
+|---|---|
+| **Faithfulness Score** (target > 0.95) | LLM-as-a-Judge validation — did the answer actually come from the documents? |
+| **Per-Turn Latency** (target < 1.5s) | Semantic caching + SSE streaming keep things fast |
+| **Token Cost per Query** | Dynamic context window trimming prevents runaway costs |
+| **Guardrail Status** | Real-time flag if a response triggers safety or grounding concerns |
 
-For more details, please visit the [GitHub repository](https://github.com/bellerophon95/nexus).
+The **Engine Tuning Interface** puts these levers directly in the user's hands — adjust `match_threshold`, `rerank` sensitivity, and `max_iterations` at runtime to balance speed against depth.
+
+{{< figure src="/mypage/images/nexus/engine-tuning.png" title="Engine Settings — adjust retrieval sensitivity and agent behavior on the fly." >}}
+
+---
+
+## Under the Hood
+
+### The Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | Next.js 15 (App Router) + React 19 (Server Components) |
+| **Backend** | FastAPI + LangGraph + Pydantic AI |
+| **Vector Store** | Qdrant Cloud (Hybrid: Dense + Sparse) |
+| **Database** | Supabase (Postgres) |
+| **Caching** | Upstash Redis (semantic vector cache) |
+| **Observability** | Langfuse (tracing, evals, cost tracking) |
+
+### The Details That Matter
+
+**SSE Multiplexing** — A single persistent Server-Sent Events connection carries text tokens, activity logs, and final metrics simultaneously. No polling, no WebSocket overhead.
+
+**Cross-Encoder Reranking** — Initial retrieval casts a wide net. The `BGE-Reranker-v2-m3` cross-encoder then evaluates each candidate against the original query as a full pair, dramatically improving signal-to-noise over embedding similarity alone.
+
+**Self-RAG Validation** — The Validator agent isn't a simple filter. It performs structured comparison between generated claims and source passages, identifying unsupported statements and triggering targeted re-retrieval when needed.
+
+{{< figure src="/mypage/images/nexus/chat-interface.png" title="The Chat Interface — deep trace visibility and explainable AI responses." >}}
+
+---
+
+## Why This Matters
+
+The AI industry is moving from "can it generate text?" to "can we trust the text it generates?" Nexus is a working answer to that question — a system where transparency isn't an afterthought but the core design principle.
+
+It demonstrates the leap from **Simple RAG** (retrieve → generate → hope for the best) to **Agentic RAG** (retrieve → synthesize → validate → self-correct → prove it).
+
+---
+
+{{< rawhtml >}}
+<p style="text-align: center; font-size: 1.1em; margin-top: 2rem;">
+  <a href="https://project-nexus.duckdns.org/" style="font-weight: bold;">Try the Live Demo →</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://github.com/bellerophon95/nexus" style="font-weight: bold;">Read the Source →</a>
+</p>
+{{< /rawhtml >}}
