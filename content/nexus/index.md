@@ -17,7 +17,7 @@ Traditional RAG systems are often "black boxes" — they retrieve documents and 
 
 **Nexus solves this through Agentic RAG.** It shifts from a simple "retrieve-then-generate" pipeline to a self-correcting, multi-agent loop where every reasoning step is observable and every hallucination is caught before it reaches the user.
 
-{{< figure src="/images/nexus/dashboard.png" title="The Nexus Multi-Agent Lab Dashboard — real-time agentic reasoning, trace metrics, and citation logic at a glance." >}}
+{{< figure src="/mypage/images/nexus/dashboard.png" title="The Nexus Multi-Agent Lab Dashboard — real-time agentic reasoning, trace metrics, and citation logic at a glance." >}}
 
 ---
 
@@ -44,7 +44,7 @@ graph TD
 - **Analyst** — Synthesizes hundreds of context tokens into professional, cited responses.
 - **Validator** — The "Hallucination Gate." Fact-checks the Analyst's draft against source documents before approval.
 
-{{< figure src="/images/nexus/skills-hub.png" title="Radial Discovery — semantic vector search dynamically injects expert personas into the agent state." >}}
+{{< figure src="/mypage/images/nexus/skills-hub.png" title="Radial Discovery — semantic vector search dynamically injects expert personas into the agent state." >}}
 
 ---
 
@@ -62,7 +62,7 @@ Every query in Nexus passes through a strictly orchestrated pipeline, optimized 
 8. **LLM Judge Evaluation** — 6-dimension scoring (Faithfulness, Relevance, etc.).
 9. **SSE Stream Response** — Token-by-token streaming with live metrics.
 
-{{< figure src="/images/nexus/chat-interface.png" title="The Chat Interface — deep trace visibility and explainable AI responses." >}}
+{{< figure src="/mypage/images/nexus/chat-interface.png" title="The Chat Interface — deep trace visibility and explainable AI responses." >}}
 
 ---
 
@@ -76,7 +76,7 @@ The **Validator agent** uses a structured `Self-RAG` pipeline to ensure every cl
 - **Hallucination Score ≤ 0.5** → Response passes with a `WARNING` badge.
 - Technical failures in validation default to **Fail-Closed** (Unsafe).
 
-{{< figure src="/images/nexus/knowledge-base.png" title="The Automated Knowledge Hub — document ingestion with SimHash deduplication." >}}
+{{< figure src="/mypage/images/nexus/knowledge-base.png" title="The Automated Knowledge Hub — document ingestion with SimHash deduplication." >}}
 
 ---
 
@@ -102,7 +102,7 @@ Most AI projects run only locally due to high RAM requirements. Nexus was archit
 | **Safety** | Microsoft Presidio, Self-RAG Gates |
 | **DevOps** | AWS, Terraform, Docker, GitHub Actions |
 
-{{< figure src="/images/nexus/engine-tuning.png" title="Engine Settings — adjust retrieval sensitivity and agent behavior on the fly." >}}
+{{< figure src="/mypage/images/nexus/engine-tuning.png" title="Engine Settings — adjust retrieval sensitivity and agent behavior on the fly." >}}
 
 ---
 
