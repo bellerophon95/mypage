@@ -1,0 +1,95 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.5in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+% Tighter lists
+\setlist[itemize]{nosep, leftmargin=14pt, topsep=1pt, parsep=0pt, itemsep=1.5pt}
+
+% Commands
+\newcommand{\role}[4]{%
+  \vspace{3pt}
+  \noindent\textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4}
+  \vspace{1pt}
+}
+
+\newcommand{\project}[3]{%
+  \vspace{3pt}
+  \noindent\textbf{#1} \hfill \textit{#2} \\
+  {\small #3}
+  \vspace{1pt}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Large\bfseries VIBHOR KASHMIRA} \\[3pt]
+  Detroit, MI \enspace$\cdot$\enspace (313) 746-0667 \enspace$\cdot$\enspace vibhorkashmira@gmail.com \enspace$\cdot$\enspace \href{https://bellerophon95.github.io/mypage}{bellerophon95.github.io/mypage}
+\end{center}
+
+\vspace{-4pt}
+\noindent Software engineer with 7+ years building event-driven systems, data pipelines, and AI-powered products. Built high-throughput Kafka pipelines processing 10K+ msgs/sec at enterprise scale. Currently building backend systems for LLM agent workflows, context management, and evaluation tooling.
+
+% Experience
+\section{Experience}
+
+\role{Software Engineer (AI)}{Aug 2025 -- Present}{Vizly Inc.}{Southfield, MI}
+\begin{itemize}
+  \item Architected distributed agent execution system with a full ReAct reasoning loop, human-in-the-loop approval gates, autonomous actions layer, and recursive fallback. Coordinated decoupled components via database-backed message passing, cron-driven scheduling, idempotent retries, and durable state persistence across human interrupts.
+  \item Built MCP server (FastAPI) exposing tools for AI agents to load code samples, read/write to the database, and query metadata for autonomous task execution.
+  \item Designed context management layer (Supabase) decoupling heavy datasets from LLM prompts, reducing token usage by 60\%.
+  \item Architected RPyC bridge on AWS EKS for streaming S3 datasets to JupyterHub. Deployed with Docker/ECR, Prometheus, Grafana, and OpenTelemetry. Cut infrastructure costs by 10\% via FinOps.
+\end{itemize}
+
+\role{Software Engineer}{Jun 2017 -- Jun 2023}{Sprinklr Inc.}{Gurugram, India}
+\begin{itemize}
+  \item Led migration of legacy Engagement feed APIs to GraphQL, reducing response time by 15\% and network payload by 25\%. Leveraged gRPC and reactive processing (Spring WebFlux) for key performance paths.
+  \item Engineered event-driven architecture using Kafka, processing 10,000+ messages/sec with end-to-end observability and event tracing.
+  \item Optimized MongoDB via progressive sharding driven by event tracing data, reducing query latency by 15\% for the Engagement feed and 14 Governance asset classes.
+  \item Reduced infrastructure costs by 10\% via AWS Lambda/EC2 for skewed workloads. Achieved 99.9\% availability across Kubernetes environments with near-zero-downtime deployments and automated testing (Gatling, REST Assured) via Jenkins CI/CD.
+  \item Mentored junior developers through code reviews and pair programming, reducing regression issues by 20\%.
+\end{itemize}
+
+% Projects
+\section{Projects}
+
+\project{Rentaroost}{Jul -- Aug 2024}{\href{https://bellerophon95.github.io/mypage/rentaroost/}{bellerophon95.github.io/mypage/rentaroost/}}
+\begin{itemize}
+  \item Built real-time dynamic pricing pipeline using Apache Kafka and Apache Flink with watermark handling for out-of-order events. Prices adjust based on view and booking event streams with configurable TTLs via Redis.
+  \item Implemented distributed transaction orchestration using the Kafka Saga pattern across payment (Stripe) and booking services with Spring WebFlux for non-blocking write flows.
+  \item Designed CQRS-style architecture with GraphQL (Netflix DGS) for user-facing queries, gRPC for synchronous internal reads, and Kafka for async mutations. Deployed on Kubernetes.
+\end{itemize}
+
+\project{Nexus -- Multi-Agent RAG System}{Mar -- Apr 2026}{\href{https://project-nexus.duckdns.org}{project-nexus.duckdns.org} $\cdot$ \href{https://github.com/bellerophon95/nexus}{github.com/bellerophon95/nexus}}
+\begin{itemize}
+  \item Built and deployed a multi-agent RAG platform from zero to production on AWS in 8 days (143 commits, 3 hosting pivots). Retrieval pipeline combines Qdrant dense + Supabase BM25 sparse search with Cohere Rerank, feeding a LangGraph agent loop with Self-RAG hallucination gating. Integrated Langfuse tracing; real-time SSE streaming of agent state to Next.js 15 frontend. Runs on a \$15/month t3.small via Terraform IaC.
+\end{itemize}
+
+% Skills
+\section{Technical Skills}
+
+\noindent\textbf{Backend:} Python (FastAPI), Java (Spring Boot), gRPC, GraphQL (Netflix DGS), Spring WebFlux, REST \\
+\textbf{Data \& Streaming:} Apache Kafka, Apache Flink, MongoDB, Redis, Supabase (PostgreSQL), Qdrant \\
+\textbf{Infrastructure:} AWS (EKS, S3, Lambda, EC2), Kubernetes, Docker, Terraform, CI/CD (Jenkins, GitHub Actions) \\
+\textbf{Observability:} Prometheus, Grafana, OpenTelemetry, ELK Stack, Langfuse \\
+\textbf{AI Tooling:} LangGraph, RAG (hybrid retrieval, cross-encoder reranking), RAGAS, MCP, Vercel AI SDK
+
+% Education
+\section{Education}
+
+\noindent\textbf{Wayne State University} -- M.S. in Computer Science (Dean's List) \hfill Aug 2023 -- Dec 2024 \\
+\textbf{The LNMIIT} -- B.Tech in Computer Science \hfill Aug 2013 -- May 2017
+
+\end{document}

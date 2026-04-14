@@ -3,7 +3,7 @@
 
 <head><script src="/mypage/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=mypage/livereload" data-no-instant defer></script>
   <title>
-  Project Nexus · Vibhor Kashmira
+  Nexus: Multi-Agent RAG Intelligence · Vibhor Kashmira
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,40 +13,22 @@
 
 
 <meta name="author" content="Vibhor Kashmira">
-<meta name="description" content="Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the &ldquo;Black Box&rdquo; problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
-🚀 Launch Live Demo
-
-  Features
-  
-    
-    Link to heading
-  
-
-
-
-Hybrid Search &#43; Cross-Encoder Reranking
-The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.">
+<meta name="description" content="A production-grade Multi-Agent Research Intelligence Platform featuring adaptive RAG, LangGraph orchestration, and a cost-optimized AWS pipeline.">
 <meta name="keywords" content="Vibhor Kashmira, Fullstack Engineer, Backend Developer, Applied AI Engineer, AWS EKS, Kafka, GraphQL, Spring Boot, React">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Project Nexus">
-  <meta name="twitter:description" content="Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the “Black Box” problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
-🚀 Launch Live Demo
-Features Link to heading Hybrid Search &#43; Cross-Encoder Reranking
-The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.">
+  <meta name="twitter:title" content="Nexus: Multi-Agent RAG Intelligence">
+  <meta name="twitter:description" content="A production-grade Multi-Agent Research Intelligence Platform featuring adaptive RAG, LangGraph orchestration, and a cost-optimized AWS pipeline.">
 
 <meta property="og:url" content="http://localhost:1313/mypage/nexus/">
   <meta property="og:site_name" content="Vibhor Kashmira">
-  <meta property="og:title" content="Project Nexus">
-  <meta property="og:description" content="Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the “Black Box” problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.
-🚀 Launch Live Demo
-Features Link to heading Hybrid Search &#43; Cross-Encoder Reranking
-The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.">
+  <meta property="og:title" content="Nexus: Multi-Agent RAG Intelligence">
+  <meta property="og:description" content="A production-grade Multi-Agent Research Intelligence Platform featuring adaptive RAG, LangGraph orchestration, and a cost-optimized AWS pipeline.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2026-03-31T08:45:00+05:30">
-    <meta property="article:modified_time" content="2026-03-31T08:45:00+05:30">
+    <meta property="article:published_time" content="2025-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-01T00:00:00+00:00">
 
 
 
@@ -103,7 +85,10 @@ The retrieval pipeline runs two passes in parallel — a dense semantic search u
 
 
 
-
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
 
 
 </head>
@@ -147,7 +132,7 @@ The retrieval pipeline runs two passes in parallel — a dense semantic search u
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/mypage/docs/kashmira__cv.pdf">Resume</a>
+              <a class="navigation-link " href="/mypage/docs/vibhor_kashmira_resume.pdf">Resume</a>
             </li>
           
             <li class="navigation-item">
@@ -169,124 +154,251 @@ The retrieval pipeline runs two passes in parallel — a dense semantic search u
     <header>
       <h1 class="title">
         <a class="title-link" href="http://localhost:1313/mypage/nexus/">
-          Project Nexus
+          Nexus: Multi-Agent RAG Intelligence
         </a>
       </h1>
     </header>
 
-    <p>Nexus is a production-grade Multi-Agent Research Intelligence Platform built to solve the &ldquo;Black Box&rdquo; problem of Retrieval Augmented Generation (RAG). By combining hybrid search, cross-encoder reranking, and real-time agentic observability, Nexus provides a transparent and verifiable AI research environment.</p>
-<p><a href="https://project-nexus.duckdns.org/"  class="external-link" target="_blank" rel="noopener">🚀 Launch Live Demo</a></p>
-<h2 id="features">
-  Features
-  <a class="heading-link" href="#features">
+    <blockquote>
+<p><strong><a href="https://project-nexus.duckdns.org/"  class="external-link" target="_blank" rel="noopener">🚀 Launch Live Demo</a></strong>   |   <strong><a href="https://github.com/bellerophon95/nexus"  class="external-link" target="_blank" rel="noopener">📁 View Source</a></strong></p>
+<p><strong>143 commits. 8 active days. Zero to production on AWS.</strong><br>
+Solo-built from a blank repository to a deployed, multi-agent AI platform — including three hosting pivots in 48 hours.</p>
+</blockquote>
+<hr>
+<h2 id="the-problem">
+  The Problem
+  <a class="heading-link" href="#the-problem">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
+<p>Traditional RAG systems are often &ldquo;black boxes&rdquo; — they retrieve documents and generate answers with no transparency into <em>why</em> a specific piece of context was chosen or whether the final answer is actually grounded in truth. This lack of observability makes them unsuitable for high-stakes research or decision support.</p>
+<p><strong>Nexus solves this through Agentic RAG.</strong> It shifts from a simple &ldquo;retrieve-then-generate&rdquo; pipeline to a self-correcting, multi-agent loop where every reasoning step is observable and every hallucination is caught before it reaches the user.</p>
+<figure><img src="/mypage/images/nexus/dashboard.png"><figcaption>
+      <h4>The Nexus Multi-Agent Lab Dashboard — real-time agentic reasoning, trace metrics, and citation logic at a glance.</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="build-sprint-the-8-day-timeline">
+  Build Sprint: The 8-Day Timeline
+  <a class="heading-link" href="#build-sprint-the-8-day-timeline">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Nexus wasn&rsquo;t built over months of casual study; it was a high-velocity sprint from zero to a production-grade AWS environment.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Day</th>
+          <th>Focus</th>
+          <th>Key Milestone</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1</strong></td>
+          <td><strong>Core Platform</strong></td>
+          <td>Built full-stack monorepo (FastAPI + Next.js). First deployment attempt on Railway.</td>
+      </tr>
+      <tr>
+          <td><strong>1-2</strong></td>
+          <td><strong>Infra Pivots</strong></td>
+          <td><strong>Railway → Render → AWS.</strong> Pivoted across three hosting platforms in 48 hours to solve dependency and RAM constraints.</td>
+      </tr>
+      <tr>
+          <td><strong>3</strong></td>
+          <td><strong>Feature Sprint</strong></td>
+          <td>Knowledge Hub, Agent Flow observability, shadow auth, and Self-RAG gate live on AWS.</td>
+      </tr>
+      <tr>
+          <td><strong>4</strong></td>
+          <td><strong>Expert Skills</strong></td>
+          <td>Implemented <strong>Radial Discovery</strong> skill hub and high-speed async ingestion pipeline.</td>
+      </tr>
+      <tr>
+          <td><strong>5</strong></td>
+          <td><strong>Optimization</strong></td>
+          <td>Swapped to <strong>Cohere Rerank</strong> for cost efficiency; implemented pre-commit stabilization.</td>
+      </tr>
+      <tr>
+          <td><strong>6-8</strong></td>
+          <td><strong>Production Hardening</strong></td>
+          <td>Caddy reverse proxy, memory optimization, ingestion worker resilience, and Next.js 15 migration.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="the-deployment-war-story">
+  The Deployment War Story
+  <a class="heading-link" href="#the-deployment-war-story">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The most critical signal in the Nexus commit history isn&rsquo;t just the features, but the <strong>resilience of the deployment</strong>.</p>
+<p>On Day 1, the platform was targeted for <strong>Railway</strong>, but hit immediate dependency conflicts between LangChain and Unstructured on their Metal builder. Within the same calendar day, the project was pivoted to <strong>Render</strong>, where it hit RAM starvation and port-scan timeouts on the free tier. By Day 2, I had provisioned <strong>AWS VPC/EC2 via Terraform</strong>, configured a <strong>Caddy</strong> reverse proxy, and stabilized the production environment for ~$15/month — proving the ability to adapt infrastructure under pressure.</p>
+<hr>
+<h2 id="architectural-deep-dive-the-agent-quartet">
+  Architectural Deep Dive: The Agent Quartet
+  <a class="heading-link" href="#architectural-deep-dive-the-agent-quartet">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Nexus is orchestrated by a <strong>LangGraph</strong> state machine. Unlike static chains, Nexus utilizes a <strong>Supervisor</strong> node to dynamically route tasks between specialized agents based on the evolving state of the research.</p>
+<div class="mermaid">graph TD
+    S["Supervisor (Orchestrator)"] -->|researcher| R["Researcher (Hybrid Search)"]
+    S -->|analyst| A["Analyst (Synthesis)"]
+    S -->|validator| V["Validator (Hallucination Gate)"]
+    S -->|end| E["END"]
+    
+    R --> S
+    A --> V
+    V -->|approved| E
+    V -->|rejected| S</div>
+<h3 id="the-agents">
+  The Agents
+  <a class="heading-link" href="#the-agents">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Supervisor</strong> — The LLM-driven orchestrator. Manages state transitions and decides when the research satisfies the user&rsquo;s intent.</li>
+<li><strong>Researcher</strong> — Executes hybrid search (Dense + Sparse) and integrates expert personas via <strong>Radial Discovery</strong>.</li>
+<li><strong>Analyst</strong> — Synthesizes hundreds of context tokens into professional, cited responses.</li>
+<li><strong>Validator</strong> — The &ldquo;Hallucination Gate.&rdquo; Fact-checks the Analyst&rsquo;s draft against source documents before approval.</li>
+</ul>
+<figure><img src="/mypage/images/nexus/skills-hub.png"><figcaption>
+      <h4>Radial Discovery — semantic vector search dynamically injects expert personas into the agent state.</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="9-stage-query-pipeline">
+  9-Stage Query Pipeline
+  <a class="heading-link" href="#9-stage-query-pipeline">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Every query in Nexus passes through a strictly orchestrated pipeline, optimized for speed, cost, and safety.</p>
 <ol>
-<li>
-<p><strong>Hybrid Search + Cross-Encoder Reranking</strong><br>
-The retrieval pipeline runs two passes in parallel — a dense semantic search using OpenAI embeddings, and a sparse BM25/SPLADE index for keyword-exact matching. This catches both conceptual similarity and precise term matches that dense-only retrieval misses.</p>
-</li>
-<li>
-<p><strong>Stateful Multi-Agent Loop</strong><br>
-The agents are managed by LangGraph as a directed cyclic graph — not a linear chain. Three nodes (Retriever, Analyst, and Validator) manage the research flow. If the Validator determines that a response isn&rsquo;t sufficiently grounded, it triggers a new retrieval cycle with a refined query.</p>
-</li>
-<li>
-<p><strong>Real-Time Observability</strong><br>
-Every agent transition, token consumed, and evaluation score streams to the client over a single SSE connection. The UI shows the live process graph updating node-by-node, alongside per-turn latency, token costs, faithfulness scores, and guardrail status.</p>
-</li>
+<li><strong>Input Guardrail</strong> — Profanity and restricted topic detection.</li>
+<li><strong>Semantic Cache</strong> — Upstash Redis check for near-duplicate queries.</li>
+<li><strong>Skill Orchestration</strong> — Semantic retrieval of expert personas (Radial Discovery).</li>
+<li><strong>Hybrid Retrieval</strong> — Qdrant Dense Vector + Supabase BM25 Sparse search.</li>
+<li><strong>Cohere Reranking</strong> — Cross-Encoder reranking via <code>rerank-english-v3.0</code> for maximum precision.</li>
+<li><strong>LangGraph Agent DAG</strong> — Multi-turn agentic reasoning and self-correction.</li>
+<li><strong>Output Guardrail</strong> — Presidio PII detection and Self-RAG score enforcement.</li>
+<li><strong>LLM Judge Evaluation</strong> — 6-dimension scoring (Faithfulness, Relevance, etc.).</li>
+<li><strong>SSE Stream Response</strong> — Token-by-token streaming with live metrics.</li>
 </ol>
-<h2 id="architecture">
-  Architecture
-  <a class="heading-link" href="#architecture">
+<figure><img src="/mypage/images/nexus/chat-interface.png"><figcaption>
+      <h4>The Chat Interface — deep trace visibility and explainable AI responses.</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="production-engineering-the-hallucination-gate">
+  Production Engineering: The Hallucination Gate
+  <a class="heading-link" href="#production-engineering-the-hallucination-gate">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<ol>
-<li>
-<p><strong>Next.js 15 &amp; React 19</strong><br>
-User-facing interface built with a streaming-first rendering model that perfectly aligns with the Server-Sent Events (SSE) architecture for real-time updates.</p>
-</li>
-<li>
-<p><strong>FastAPI + LangGraph</strong><br>
-Backend orchestration layer providing an async-native, type-safe environment for managing complex agentic workflows and multi-node state transitions.</p>
-</li>
-<li>
-<p><strong>Qdrant Cloud</strong><br>
-Used as the primary vector intelligence layer, supporting native hybrid search (dense + sparse) in a single unified query for maximum retrieval precision.</p>
-</li>
-<li>
-<p><strong>Supabase &amp; Redis</strong><br>
-PostgreSQL manages document metadata and ingestion history, while Upstash Redis provides high-speed semantic caching to reduce latency on repeated queries.</p>
-</li>
-<li>
-<p><strong>Langfuse</strong><br>
-Full-stack tracing and observability. Surfacing per-turn latency, token costs, and automated evaluation metrics (Faithfulness and Relevance) directly in the research dashboard.</p>
-</li>
-</ol>
-<h2 id="screenshots">
-  Screenshots
-  <a class="heading-link" href="#screenshots">
+<p>The <strong>Validator agent</strong> uses a structured <code>Self-RAG</code> pipeline to ensure every claim is grounded.</p>
+<p><strong>The Logic</strong>:</p>
+<ul>
+<li>Factual claims are extracted and compared against source passages.</li>
+<li><strong>Hallucination Score &gt; 0.5</strong> → Response is <strong>BLOCKED</strong>.</li>
+<li><strong>Hallucination Score ≤ 0.5</strong> → Response passes with a <code>WARNING</code> badge.</li>
+<li>Technical failures in validation default to <strong>Fail-Closed</strong> (Unsafe).</li>
+</ul>
+<figure><img src="/mypage/images/nexus/knowledge-base.png"><figcaption>
+      <h4>The Automated Knowledge Hub — document ingestion with SimHash deduplication.</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="engineering-for-scale-the-15month-production-cloud">
+  Engineering for Scale: The $15/Month Production Cloud
+  <a class="heading-link" href="#engineering-for-scale-the-15month-production-cloud">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<h3 id="multi-agent-lab">
-  Multi-Agent Lab
-  <a class="heading-link" href="#multi-agent-lab">
+<p>Most AI projects run only locally due to high RAM requirements. Nexus was architected from day one to be <strong>Production-Grade on a Budget</strong>, running entirely on an AWS <strong>t3.small</strong> (2GB RAM).</p>
+<h3 id="cost-optimizations">
+  Cost Optimizations
+  <a class="heading-link" href="#cost-optimizations">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<p><img src="/mypage/images/nexus/dashboard.png" alt="Lab Dashboard">
-<em>Real-time agentic reasoning, trace metrics, and citation grounding — visible as it happens.</em></p>
-<h3 id="knowledge-ingestion">
-  Knowledge Ingestion
-  <a class="heading-link" href="#knowledge-ingestion">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><img src="/mypage/images/nexus/knowledge-base.png" alt="Knowledge Hub">
-<em>The Automated Knowledge Hub for document ingestion and semantic chunking.</em></p>
-<h3 id="observability-interface">
-  Observability Interface
-  <a class="heading-link" href="#observability-interface">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><img src="/mypage/images/nexus/chat-interface.png" alt="Chat Interface">
-<em>Explainable AI responses with deep trace visibility and evaluation scores.</em></p>
-<h3 id="agent-skills-hub">
-  Agent Skills Hub
-  <a class="heading-link" href="#agent-skills-hub">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><img src="/mypage/images/nexus/skills-hub.png" alt="Skills Hub">
-<em>The Agent Skills Hub for managing custom tool integrations and reasoning capabilities.</em></p>
-<h3 id="engine-tuning">
-  Engine Tuning
-  <a class="heading-link" href="#engine-tuning">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><img src="/mypage/images/nexus/engine-tuning.png" alt="Engine Configuration">
-<em>Runtime controls for adjusting retrieval sensitivity and agent reasoning depth.</em></p>
-<h2 id="conclusion">
-  Conclusion
-  <a class="heading-link" href="#conclusion">
+<ul>
+<li><strong>API-First Reranking</strong>: Moved from a 1.5GB local Cross-Encoder to the <strong>Cohere Rerank API</strong>, freeing 700MB of RAM.</li>
+<li><strong>LLM-as-Validator</strong>: Replaced a local NLI model with <code>gpt-4o-mini</code>, identifying hallucinations for ~$0.10 per 1,000 runs while saving another 1.5GB of RAM.</li>
+<li><strong>Infrastructure as Code</strong>: Managed via <strong>Terraform</strong> (VPC, ECR, EC2) with a zero-downtime <strong>GitHub Actions</strong> CI/CD pipeline.</li>
+</ul>
+<hr>
+<h2 id="infrastructure-stack">
+  Infrastructure Stack
+  <a class="heading-link" href="#infrastructure-stack">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Nexus demonstrates the transition from &ldquo;Simple RAG&rdquo; to &ldquo;Agentic RAG.&rdquo; It moves beyond basic document retrieval into a stateful, observable, and self-correcting intelligence layer capable of handling complex research tasks with verified citations and professional-grade transparency.</p>
-<p>For more details, please visit the <a href="https://github.com/bellerophon95/nexus"  class="external-link" target="_blank" rel="noopener">GitHub repository</a>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Technology</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Frontend</strong></td>
+          <td>Next.js 15, React 19, Tailwind CSS</td>
+      </tr>
+      <tr>
+          <td><strong>Backend</strong></td>
+          <td>Python 3.12, FastAPI, LangGraph</td>
+      </tr>
+      <tr>
+          <td><strong>Search</strong></td>
+          <td>Qdrant Cloud (Hybrid), Cohere Rerank</td>
+      </tr>
+      <tr>
+          <td><strong>Observability</strong></td>
+          <td>Langfuse (Tracing, Evals, Cost Tracking)</td>
+      </tr>
+      <tr>
+          <td><strong>Safety</strong></td>
+          <td>Microsoft Presidio, Self-RAG Gates</td>
+      </tr>
+      <tr>
+          <td><strong>DevOps</strong></td>
+          <td>AWS, Terraform, Docker, GitHub Actions</td>
+      </tr>
+  </tbody>
+</table>
+<figure><img src="/mypage/images/nexus/engine-tuning.png"><figcaption>
+      <h4>Engine Settings — adjust retrieval sensitivity and agent behavior on the fly.</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="why-this-matters">
+  Why This Matters
+  <a class="heading-link" href="#why-this-matters">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Nexus represents the shift from <strong>Simple RAG</strong> (generative hope) to <strong>Applied AI Engineering</strong> (verifiable proof). By surfacing the &ldquo;hidden&rdquo; reasoning of agents and enforcing strict cost/safety guardrails, it provides a blueprint for trustworthy, production-ready AI systems.</p>
+<p>For the full technical breakdown, explore the <a href="https://github.com/bellerophon95/nexus"  class="external-link" target="_blank" rel="noopener"><strong>GitHub Repository</strong></a>.</p>
 
   </article>
 </section>
@@ -303,9 +415,7 @@ Full-stack tracing and observability. Surfacing per-turn latency, token costs, a
     
     2026
      Vibhor Kashmira 
-    ·
     
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>

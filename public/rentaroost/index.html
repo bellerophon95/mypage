@@ -13,41 +13,18 @@
 
 
 <meta name="author" content="Vibhor Kashmira">
-<meta name="description" content="Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.
-
-  Features
-  
-    
-    Link to heading
-  
-
-
-
-Integration with Stripe API
-Secure and reliable payment processing upon booking. Real-time payment confirmation.
-
-
-Dynamic Pricing
-Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.">
+<meta name="description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence.">
 <meta name="keywords" content="Vibhor Kashmira, Fullstack Engineer, Backend Developer, Applied AI Engineer, AWS EKS, Kafka, GraphQL, Spring Boot, React">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Project Rentaroost">
-  <meta name="twitter:description" content="Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.
-Features Link to heading Integration with Stripe API
-Secure and reliable payment processing upon booking. Real-time payment confirmation.
-Dynamic Pricing
-Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.">
+  <meta name="twitter:description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence.">
 
 <meta property="og:url" content="http://localhost:1313/mypage/rentaroost/">
   <meta property="og:site_name" content="Vibhor Kashmira">
   <meta property="og:title" content="Project Rentaroost">
-  <meta property="og:description" content="Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.
-Features Link to heading Integration with Stripe API
-Secure and reliable payment processing upon booking. Real-time payment confirmation.
-Dynamic Pricing
-Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.">
+  <meta property="og:description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:published_time" content="2024-07-31T16:29:49+05:30">
@@ -108,7 +85,10 @@ Prices are adjusted based on the number of views and successful bookings. Ensure
 
 
 
-
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
 
 
 </head>
@@ -152,7 +132,7 @@ Prices are adjusted based on the number of views and successful bookings. Ensure
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/mypage/docs/kashmira__cv.pdf">Resume</a>
+              <a class="navigation-link " href="/mypage/docs/vibhor_kashmira_resume.pdf">Resume</a>
             </li>
           
             <li class="navigation-item">
@@ -179,103 +159,169 @@ Prices are adjusted based on the number of views and successful bookings. Ensure
       </h1>
     </header>
 
-    <p>Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.</p>
-<h2 id="features">
-  Features
-  <a class="heading-link" href="#features">
+    <blockquote>
+<p><strong><a href="https://github.com/bellerophon95/rentaroost"  class="external-link" target="_blank" rel="noopener">📁 View Source</a></strong></p>
+</blockquote>
+<hr>
+<h2 id="high-performance-event-driven-real-estate-ecosystem">
+  High-Performance Event-Driven Real Estate Ecosystem
+  <a class="heading-link" href="#high-performance-event-driven-real-estate-ecosystem">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
+<p>Rentaroost is a specialized microservices platform designed for high-concurrency rental transactions. Moving beyond simple CRUD, it implements a <strong>Choreographed Saga Pattern</strong> for distributed consistency and utilizes <strong>Apache Flink</strong> for real-time pricing intelligence based on live demand signals.</p>
+<h2 id="full-system-topology">
+  Full System Topology
+  <a class="heading-link" href="#full-system-topology">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The ecosystem consists of 9 specialized services communicating via gRPC for synchronous retrieval and Kafka for asynchronous choreography.</p>
+<div class="mermaid">graph LR
+    Client["Client (Next.js)"] --> GW["Gateway :6500"]
+    Client --> GQL["GraphQL (DGS) :8185"]
+    
+    GW --> LS["Listings :8085"]
+    GW --> BS["Booking :8380"]
+    GW --> DPS["Dynamic Pricing :8281"]
+    
+    GQL -->|gRPC| LS
+    GQL -->|gRPC| BS
+    GQL -->|gRPC| PS["Payments :4242"]
+    
+    BS -->|gRPC| PS
+    
+    BS -->|"user.payment.initiated"| Kafka
+    PS -->|"user.payment.confirmed / failed"| Kafka
+    LS -->|"user.listings.view"| Kafka
+    BS -->|"user.booking.confirmed"| Kafka
+    
+    DPS -->|"dynamicpricing.update"| Kafka
+    Kafka -->|"dynamicpricing.update"| Flink["Flink Job"]
+    Flink -->|"dynamicpricing.output"| Kafka
+    Kafka -->|"dynamicpricing.output"| DPS
+    
+    DPS --> Redis["Redis (Price Cache)"]
+    LS --> MongoDB[(MongoDB)]
+    BS --> MongoDB
+    
+    PS --> Stripe["Stripe API"]
+    PNS["Push Notif :6700"] --> FCM["Firebase (FCM)"]
+    
+    subgraph Discovery
+      Eureka["Eureka :8761"]
+    end</div>
+<hr>
+<h2 id="core-engineering-achievements">
+  Core Engineering Achievements
+  <a class="heading-link" href="#core-engineering-achievements">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Technical Implementation</th>
+          <th>Impact</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>API Layer</strong></td>
+          <td>GraphQL (DGS) + gRPC</td>
+          <td>Polyglot API: Typed Graph queries for external consumers; high-speed binary gRPC for internal reads.</td>
+      </tr>
+      <tr>
+          <td><strong>Consistency</strong></td>
+          <td>Kafka Choreography</td>
+          <td>Decoupled Saga flow managing payments and bookings without a central orchestrator bottleneck.</td>
+      </tr>
+      <tr>
+          <td><strong>Intelligence</strong></td>
+          <td>Apache Flink</td>
+          <td>Real-time demand-sensing using 30-minute sliding event-time windows and out-of-order watermark handling.</td>
+      </tr>
+      <tr>
+          <td><strong>Persistence</strong></td>
+          <td>Reactive MongoDB</td>
+          <td>Non-blocking data access for property and booking metadata.</td>
+      </tr>
+      <tr>
+          <td><strong>Edge Logic</strong></td>
+          <td>Spring Cloud Gateway</td>
+          <td>Aggregated routing and dynamic pricing proxies for front-end consumers.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="deep-dive-kafka-event-choreography">
+  Deep Dive: Kafka Event Choreography
+  <a class="heading-link" href="#deep-dive-kafka-event-choreography">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Unlike traditional centralized orchestration, Rentaroost uses <strong>Choreography</strong>. Each service reacts independently to events on the Kafka bus, ensuring higher scalability and looser coupling.</p>
+<p><strong>Key Flow: Booking &amp; Payment Consistency</strong></p>
 <ol>
-<li>
-<p><strong>Integration with Stripe API</strong><br>
-Secure and reliable payment processing upon booking. Real-time payment confirmation.</p>
-</li>
-<li>
-<p><strong>Dynamic Pricing</strong><br>
-Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.</p>
-</li>
-<li>
-<p><strong>Push Notifications</strong><br>
-Users receive notifications for successful payments, bookings, and price drops. Real-time updates keep users informed and engaged.</p>
-</li>
+<li><strong>Booking Service</strong> emits <code>user.payment.initiated</code>.</li>
+<li><strong>Payment Service</strong> consumes event, calls Stripe API, and emits <code>user.payment.confirmed</code>.</li>
+<li><strong>Booking Service</strong> finalizes state and triggers FCM push notifications.</li>
 </ol>
-<h2 id="architecture">
-  Architecture
-  <a class="heading-link" href="#architecture">
+<div class="mermaid">sequenceDiagram
+    participant C as Client
+    participant GQL as GraphQL (DGS)
+    participant BS as Booking Service
+    participant K as Kafka
+    participant PS as Payments Service
+    participant S as Stripe API
+    
+    C->>GQL: createBooking mutation
+    GQL->>BS: gRPC CreateBooking
+    BS->>K: Produce "user.payment.initiated"
+    K->>PS: Consume "user.payment.initiated"
+    PS->>S: PaymentIntent.create() + confirm()
+    alt Success
+        S-->>PS: PaymentIntent confirmed
+        PS->>K: Produce "user.payment.confirmed"
+    else Failure
+        S-->>PS: StripeException
+        PS->>K: Produce "user.payment.failed"
+    end</div>
+<hr>
+<h2 id="deep-dive-flink-dynamic-pricing-engine">
+  Deep Dive: Flink Dynamic Pricing Engine
+  <a class="heading-link" href="#deep-dive-flink-dynamic-pricing-engine">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<ol>
-<li>
-<p><strong>GraphQL with Netflix DGS</strong><br>
-User-facing API built with GraphQL for efficient and flexible data querying. Utilizes Netflix DGS for rapid development and scalability.</p>
+<p>The system uses <strong>Apache Flink</strong> to compute real-time price adjustments based on demand signals. This is a legitimate data engineering pipeline, not just a backend calculation.</p>
+<ul>
+<li><strong>Deduplication</strong>: Per-window deduping by <code>userID + eventType</code> to prevent price manipulation.</li>
+<li><strong>Algorithm State</strong>:
+<ul>
+<li><code>Booking_Impact</code>: +10% multiplier per unique booking event.</li>
+<li><code>View_Impact</code>: +5% multiplier per unique view event.</li>
+</ul>
 </li>
-<li>
-<p><strong>Apache Kafka Saga Pattern</strong><br>
-Handles mutation flows, including payments, bookings, and listing creation. Supports WebFlux for write flows to ensure non-blocking, reactive processing.</p>
-</li>
-<li>
-<p><strong>Unary Synchronous gRPC</strong><br>
-Read queries are handled using unary synchronous gRPC. A rudimentary CQRS-like approach separates commands and queries. Plans to optimize read flows using non-blocking stubs in the future.</p>
-</li>
-<li>
-<p><strong>Push Notifications with Firebase Cloud Messaging</strong><br>
-Push notifications implemented using Firebase Cloud Messaging. Basic client developed in NextJS.</p>
-</li>
-<li>
-<p><strong>Dynamic Pricing Calculations</strong><br>
-Uses Apache Flink and Kafka for dynamic pricing. Watermarks account for out-of-order and late arrivals due to computation and bandwidth latencies. Different impacts on price delta for view and booking events.</p>
-</li>
-<li>
-<p><strong>Redis for Dynamic Pricing Deltas</strong><br>
-Dynamic pricing deltas stored in Redis, used in conjunction with a Kafka sink. Redis Hashes with TTLs to remove dynamic pricing impact after expiration. Redis pub/sub triggers push notifications for price drops. Plans to upgrade to Cassandra for writing dynamic pricing deltas and integrate Apache Druid for pricing analytics.</p>
-</li>
-<li>
-<p><strong>Spring Boot with MongoDB</strong><br>
-Primary database is MongoDB, providing document-level transaction guarantees for sensitive payment flows. Spring Boot framework ensures robust and maintainable backend services.</p>
-</li>
-<li>
-<p><strong>Deployment on Kubernetes</strong><br>
-The entire application is containerized and deployed on Kubernetes. Ensures scalability, high availability, and easy management.</p>
-</li>
-</ol>
-<h2 id="future-improvements">
-  Future Improvements
-  <a class="heading-link" href="#future-improvements">
+<li><strong>Consistency</strong>: 30-second bounded out-of-orderness watermarks ensure late-arriving events are correctly calculated before the 1-minute slide triggers.</li>
+<li><strong>Caching</strong>: Results are pushed to <strong>Redis</strong> with a 30-minute rolling TTL, ensuring the &ldquo;hot&rdquo; demand price decays back to base price automatically.</li>
+</ul>
+<hr>
+<h2 id="infrastructure">
+  Infrastructure
+  <a class="heading-link" href="#infrastructure">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<ol>
-<li>
-<p><strong>Cassandra Integration</strong><br>
-Upgrade from Redis to Cassandra for better scalability and durability.</p>
-</li>
-<li>
-<p><strong>Apache Druid Integration</strong><br>
-Optimize pricing strategies with advanced analytics.</p>
-</li>
-<li>
-<p><strong>Non-blocking gRPC</strong><br>
-Transition to non-blocking gRPC stubs for improved performance on read queries.</p>
-</li>
-<li>
-<p><strong>Enhanced User Interface</strong><br>
-Further refine the NextJS client for a better user experience.</p>
-</li>
-</ol>
-<h2 id="conclusion">
-  Conclusion
-  <a class="heading-link" href="#conclusion">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<p>Rent-a-Roost showcases the integration of various modern technologies to create a robust, scalable, and user-friendly application. The project demonstrates expertise in system design, architecture, and the use of reactive and non-blocking frameworks to handle high concurrency and ensure reliable operations.</p>
-<p>For more details, please visit the <a href="https://github.com/bellerophon95/rentaroost"  class="external-link" target="_blank" rel="noopener">GitHub repository</a>.</p>
+<p>The architecture is designed for <strong>cloud-native scalability</strong>. While the repo provides a complete <code>docker-compose.yaml</code> for local development (including Zookeeper, Kafka, and Flink), the production design targets managed services like Confluent and Managed Flink to handle industrial-scale rental traffic.</p>
+<p>For a deeper look into the implementation, visit the <a href="https://github.com/bellerophon95/rentaroost"  class="external-link" target="_blank" rel="noopener"><strong>GitHub Repository</strong></a>.</p>
 
   </article>
 </section>
@@ -292,9 +338,7 @@ Further refine the NextJS client for a better user experience.</p>
     
     2026
      Vibhor Kashmira 
-    ·
     
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
