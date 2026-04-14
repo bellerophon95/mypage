@@ -8,6 +8,9 @@ tags: ["AI", "Agentic RAG", "LangGraph", "FastAPI", "Next.js", "Qdrant", "Cohere
 ---
 
 > **[🚀 Launch Live Demo](https://project-nexus.duckdns.org/)**  &nbsp;|&nbsp;  **[📁 View Source](https://github.com/bellerophon95/nexus)**
+>
+> **143 commits. 8 active days. Zero to production on AWS.**  
+> Solo-built from a blank repository to a deployed, multi-agent AI platform — including three hosting pivots in 48 hours.
 
 ---
 
@@ -18,6 +21,27 @@ Traditional RAG systems are often "black boxes" — they retrieve documents and 
 **Nexus solves this through Agentic RAG.** It shifts from a simple "retrieve-then-generate" pipeline to a self-correcting, multi-agent loop where every reasoning step is observable and every hallucination is caught before it reaches the user.
 
 {{< figure src="/mypage/images/nexus/dashboard.png" title="The Nexus Multi-Agent Lab Dashboard — real-time agentic reasoning, trace metrics, and citation logic at a glance." >}}
+
+---
+
+## Build Sprint: The 8-Day Timeline
+
+Nexus wasn't built over months of casual study; it was a high-velocity sprint from zero to a production-grade AWS environment.
+
+| Day | Focus | Key Milestone |
+|---|---|---|
+| **1** | **Core Platform** | Built full-stack monorepo (FastAPI + Next.js). First deployment attempt on Railway. |
+| **1-2** | **Infra Pivots** | **Railway → Render → AWS.** Pivoted across three hosting platforms in 48 hours to solve dependency and RAM constraints. |
+| **3** | **Feature Sprint** | Knowledge Hub, Agent Flow observability, shadow auth, and Self-RAG gate live on AWS. |
+| **4** | **Expert Skills** | Implemented **Radial Discovery** skill hub and high-speed async ingestion pipeline. |
+| **5** | **Optimization** | Swapped to **Cohere Rerank** for cost efficiency; implemented pre-commit stabilization. |
+| **6-8** | **Production Hardening** | Caddy reverse proxy, memory optimization, ingestion worker resilience, and Next.js 15 migration. |
+
+### The Deployment War Story
+
+The most critical signal in the Nexus commit history isn't just the features, but the **resilience of the deployment**. 
+
+On Day 1, the platform was targeted for **Railway**, but hit immediate dependency conflicts between LangChain and Unstructured on their Metal builder. Within the same calendar day, the project was pivoted to **Render**, where it hit RAM starvation and port-scan timeouts on the free tier. By Day 2, I had provisioned **AWS VPC/EC2 via Terraform**, configured a **Caddy** reverse proxy, and stabilized the production environment for ~$15/month — proving the ability to adapt infrastructure under pressure.
 
 ---
 
