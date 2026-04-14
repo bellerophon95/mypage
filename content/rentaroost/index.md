@@ -2,65 +2,73 @@
 draft = false
 title = "Project Rentaroost"
 date = 2024-07-31T16:29:49+05:30
+description = "A high-performance real-estate SaaS ecosystem built on a reactive, event-driven architecture and Saga orchestration."
+tags = ["Saga Pattern", "Kafka", "Flink", "Java", "Spring Boot", "GraphQL", "Netflix DGS"]
 +++
 
-Rent-a-Roost is an Airbnb clone that allows users to view listings and book them after payment. The application integrates various cutting-edge technologies to provide a seamless user experience, dynamic pricing, and reliable payment processing.
+> **[📁 View Source](https://github.com/bellerophon95/rentaroost)**
 
-## Features
+---
 
-1. **Integration with Stripe API**  
-   Secure and reliable payment processing upon booking. Real-time payment confirmation.
+## High-Performance Event-Driven Real Estate Ecosystem
 
-2. **Dynamic Pricing**  
-   Prices are adjusted based on the number of views and successful bookings. Ensures competitive pricing and maximizes revenue.
+Rentaroost is a production-grade real-estate SaaS platform designed for high concurrency and complex transactional consistency. Instead of a traditional monolithic approach, it utilizes a **Reactive Microservices** architecture to handle millions of property listings and real-time booking flows.
 
-3. **Push Notifications**  
-   Users receive notifications for successful payments, bookings, and price drops. Real-time updates keep users informed and engaged.
+## Core Engineering Achievements
 
+| Layer | Technology | Key Impact |
+|---|---|---|
+| **API Layer** | GraphQL + Netflix DGS | Efficient data fetching with typed safety and rapid schema evolution. |
+| **Orchestration** | Apache Kafka (Saga Pattern) | Ensures distributed transactional consistency across payments and bookings using non-blocking WebFlux. |
+| **Stream Processing** | Apache Flink | Real-time dynamic pricing calculation with watermark-aware windowing. |
+| **Data Logic** | gRPC + CQRS | Unary synchronous gRPC for high-speed read queries, strictly separated from write flows. |
+| **Caching** | Redis (Hashes + Pub/Sub) | Real-time price drop notifications and TTL-based dynamic pricing deltas. |
 
+---
 
-## Architecture
+## The Architecture: Saga Orchestration
 
-1. **GraphQL with Netflix DGS**  
-   User-facing API built with GraphQL for efficient and flexible data querying. Utilizes Netflix DGS for rapid development and scalability.
+To maintain consistency without the overhead of 2PC, Rentaroost implements the **Saga Pattern** via Apache Kafka. This ensures that every booking flow is either fully completed or gracefully compensated across the Payment, Booking, and Listing services.
 
-2. **Apache Kafka Saga Pattern**  
-   Handles mutation flows, including payments, bookings, and listing creation. Supports WebFlux for write flows to ensure non-blocking, reactive processing.
+```mermaid
+sequenceDiagram
+    participant U as User (Next.js)
+    participant G as Gateway (DGS)
+    participant K as Kafka (Event Bus)
+    participant P as Payment Service
+    participant B as Booking Service
 
-3. **Unary Synchronous gRPC**  
-   Read queries are handled using unary synchronous gRPC. A rudimentary CQRS-like approach separates commands and queries. Plans to optimize read flows using non-blocking stubs in the future.
+    U->>G: Initiate Booking
+    G->>K: Emit "Booking_Created"
+    K->>P: Trigger Payment Flow
+    alt Payment Success
+        P->>K: Emit "Payment_Succeeded"
+        K->>B: Finalize Booking
+        B-->>U: Notify Success (FCM)
+    else Payment Failed
+        P->>K: Emit "Payment_Failed"
+        K->>B: Revert/Cancel Booking
+        B-->>U: Notify Failure
+    end
+```
 
-4. **Push Notifications with Firebase Cloud Messaging**  
-   Push notifications implemented using Firebase Cloud Messaging. Basic client developed in NextJS.
+---
 
-5. **Dynamic Pricing Calculations**  
-   Uses Apache Flink and Kafka for dynamic pricing. Watermarks account for out-of-order and late arrivals due to computation and bandwidth latencies. Different impacts on price delta for view and booking events.
+## Key Technical Features
 
-6. **Redis for Dynamic Pricing Deltas**  
-   Dynamic pricing deltas stored in Redis, used in conjunction with a Kafka sink. Redis Hashes with TTLs to remove dynamic pricing impact after expiration. Redis pub/sub triggers push notifications for price drops. Plans to upgrade to Cassandra for writing dynamic pricing deltas and integrate Apache Druid for pricing analytics.
+### 1. Dynamic Pricing Engine
+Utilizes **Apache Flink** to process event streams (views and bookings). The engine accounts for out-of-order events using watermarks and applies dynamic multipliers to the base property price, stored in high-performance Redis Hashes.
 
-7. **Spring Boot with MongoDB**  
-   Primary database is MongoDB, providing document-level transaction guarantees for sensitive payment flows. Spring Boot framework ensures robust and maintainable backend services.
+### 2. Reactive Write Flows
+All state-changing operations are handled via **Spring WebFlux** and Kafka, ensuring that the system remains responsive even under heavy write loads.
 
-8. **Deployment on Kubernetes**  
-   The entire application is containerized and deployed on Kubernetes. Ensures scalability, high availability, and easy management.
+### 3. Distributed Observability
+The architecture is designed for transparency, with plans to integrate Apache Druid for deep pricing analytics and service health monitoring.
 
-## Future Improvements
-
-1. **Cassandra Integration**  
-   Upgrade from Redis to Cassandra for better scalability and durability.
-
-2. **Apache Druid Integration**  
-   Optimize pricing strategies with advanced analytics.
-
-3. **Non-blocking gRPC**  
-   Transition to non-blocking gRPC stubs for improved performance on read queries.
-
-4. **Enhanced User Interface**  
-   Further refine the NextJS client for a better user experience.
+---
 
 ## Conclusion
 
-Rent-a-Roost showcases the integration of various modern technologies to create a robust, scalable, and user-friendly application. The project demonstrates expertise in system design, architecture, and the use of reactive and non-blocking frameworks to handle high concurrency and ensure reliable operations.
+Rentaroost demonstrates the power of modern distributed systems—moving beyond simple CRUD to handle the complexities of real-world scale, concurrency, and reliability in a cloud-native environment.
 
-For more details, please visit the [GitHub repository](https://github.com/bellerophon95/rentaroost).
+For more technical details, please explore the [GitHub repository](https://github.com/bellerophon95/rentaroost).

@@ -1,10 +1,43 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-align: left; /* Ensuring crisp, readable alignment */
+}
+
+/* Branding Halo Effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #42a5f5, transparent);
+  z-index: 9999;
+  pointer-events: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 2rem auto; /* Centered images */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px; /* Sharper radius */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Deeper, crisper shadow */
+  image-rendering: -webkit-optimize-contrast;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Refined Typography for Crispness */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+p, li {
+  line-height: 1.7;
+  color: #dadada;
 }
 
 /* Fix for the 'Link to heading' text artifact from the theme's render-hooks */
@@ -15,14 +48,60 @@ a[href^="#"] span {
 
 /* Ensure figure captions are also handled if used */
 figure {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   text-align: center;
 }
 
 figcaption {
   text-align: center;
   font-style: italic;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
   color: #888;
+  letter-spacing: 0.02em;
+}
+
+/* Home CTA Button */
+.home-cta {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 2.4rem; /* Adjusted for crisper look */
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid var(--accent);
+  white-space: nowrap; /* Prevent vertical stacking of text */
+}
+
+.button.primary {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.button.primary:hover {
+  background-color: var(--accent);
+  color: #212121;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(66, 165, 245, 0.4);
+}
+
+/* Mermaid Diagram Styling */
+.mermaid {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
 }
