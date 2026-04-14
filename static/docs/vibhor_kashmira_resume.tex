@@ -40,40 +40,41 @@
 \end{center}
 
 \vspace{-4pt}
-\noindent Software engineer with 7+ years building AI-powered products, event-driven systems, and data pipelines. Currently building agentic execution systems, evaluation infrastructure, and context management tooling for LLM workflows at an acquired YC-backed AI company.
+\noindent Software engineer with 7+ years building event-driven systems, data pipelines, and AI-powered products. Built high-throughput Kafka pipelines processing 10K+ msgs/sec at enterprise scale. Currently building backend systems for LLM agent workflows, context management, and evaluation tooling.
 
 % Experience
 \section{Experience}
 
-\role{Software Engineer (AI)}{Aug 2025 -- Present}{Vizly Inc. (YC-backed, acquired by Aggregate Intelligence)}{Southfield, MI}
+\role{Software Engineer (AI)}{Aug 2025 -- Present}{Vizly Inc.}{Southfield, MI}
 \begin{itemize}
-  \item Architected distributed agent execution system with a full ReAct reasoning loop, human-in-the-loop approval gates, autonomous actions layer, and recursive fallback. Coordinated via database-backed message passing, cron-driven scheduling, idempotent retries, and durable state persistence across human interrupts.
-  \item Built MCP server (FastAPI) exposing tools for AI agents to load code samples, read/write to the database, and query metadata --- enabling autonomous task execution across Vizly's data analysis platform.
-  \item Designed context management layer (Supabase) decoupling heavy datasets from LLM prompts, reducing token usage by 60\%. Architected RPyC bridge on AWS EKS for streaming S3 datasets to JupyterHub; cut infrastructure costs by 10\% via FinOps.
+  \item Architected distributed agent execution system with a full ReAct reasoning loop, human-in-the-loop approval gates, autonomous actions layer, and recursive fallback. Coordinated decoupled components via database-backed message passing, cron-driven scheduling, idempotent retries, and durable state persistence across human interrupts.
+  \item Built MCP server (FastAPI) exposing tools for AI agents to load code samples, read/write to the database, and query metadata for autonomous task execution.
+  \item Designed context management layer (Supabase) decoupling heavy datasets from LLM prompts, reducing token usage by 60\%.
+  \item Architected RPyC bridge on AWS EKS for streaming S3 datasets to JupyterHub. Deployed with Docker/ECR, Prometheus, Grafana, and OpenTelemetry. Cut infrastructure costs by 10\% via FinOps.
 \end{itemize}
 
 \role{Software Engineer}{Jun 2017 -- Jun 2023}{Sprinklr Inc.}{Gurugram, India}
 \begin{itemize}
   \item Led migration of legacy Engagement feed APIs to GraphQL, reducing response time by 15\% and network payload by 25\%. Leveraged gRPC and reactive processing (Spring WebFlux) for key performance paths.
-  \item Engineered event-driven architecture using Kafka, processing 10,000+ messages/sec with end-to-end observability. Optimized MongoDB via progressive sharding driven by event tracing data, reducing query latency by 15\%.
-  \item Achieved 99.9\% availability across Kubernetes environments with near-zero-downtime deployments. Reduced infrastructure costs by 10\% via AWS Lambda/EC2 for skewed workloads. Automated testing (Gatling, REST Assured) via Jenkins CI/CD.
+  \item Engineered event-driven architecture using Kafka, processing 10,000+ messages/sec with end-to-end observability and event tracing.
+  \item Optimized MongoDB via progressive sharding driven by event tracing data, reducing query latency by 15\% for the Engagement feed and 14 Governance asset classes.
+  \item Reduced infrastructure costs by 10\% via AWS Lambda/EC2 for skewed workloads. Achieved 99.9\% availability across Kubernetes environments with near-zero-downtime deployments and automated testing (Gatling, REST Assured) via Jenkins CI/CD.
   \item Mentored junior developers through code reviews and pair programming, reducing regression issues by 20\%.
 \end{itemize}
 
 % Projects
 \section{Projects}
 
-\project{Nexus -- Multi-Agent RAG System}{May 2024 -- Present}{\href{https://project-nexus.duckdns.org}{project-nexus.duckdns.org} $\cdot$ \href{https://github.com/bellerophon95/nexus}{github.com/bellerophon95/nexus}}
+\project{Rentaroost}{Jul -- Aug 2024}{\href{https://bellerophon95.github.io/mypage/rentaroost/}{bellerophon95.github.io/mypage/rentaroost/}}
 \begin{itemize}
-  \item Designed continuous evaluation system with 124-sample golden dataset, RAGAS threshold monitoring with automated violation alerting (context precision, answer relevancy), and a production-to-golden promotion workflow for iterative grounding improvement.
-  \item Built per-response trace decomposition surfacing latency, token cost, grounding score, relevance score, guardrail status, and per-source citation match percentages in a real-time observability dashboard.
-  \item Engineered multi-agent RAG pipeline (LangGraph) with hybrid retrieval (Qdrant dense + sparse), BGE-Reranker-v2 cross-encoder, and a Self-RAG validator triggering re-retrieval on insufficient grounding. Exposed runtime tuning of retrieval sensitivity, reranking depth, and max agentic loops.
-  \item Deployed full-stack on Railway/Vercel with FastAPI, Next.js 15, Supabase, Upstash Redis semantic caching, and GitHub Actions CI/CD. Solo-built across 80 commits.
+  \item Built real-time dynamic pricing pipeline using Apache Kafka and Apache Flink with watermark handling for out-of-order events. Prices adjust based on view and booking event streams with configurable TTLs via Redis.
+  \item Implemented distributed transaction orchestration using the Kafka Saga pattern across payment (Stripe) and booking services with Spring WebFlux for non-blocking write flows.
+  \item Designed CQRS-style architecture with GraphQL (Netflix DGS) for user-facing queries, gRPC for synchronous internal reads, and Kafka for async mutations. Deployed on Kubernetes.
 \end{itemize}
 
-\project{Rentaroost}{May -- Jun 2024}{\href{https://bellerophon95.github.io/mypage/rentaroost/}{bellerophon95.github.io/mypage/rentaroost/}}
+\project{Nexus -- Multi-Agent RAG System}{Mar -- Apr 2026}{\href{https://project-nexus.duckdns.org}{project-nexus.duckdns.org} $\cdot$ \href{https://github.com/bellerophon95/nexus}{github.com/bellerophon95/nexus}}
 \begin{itemize}
-  \item Built real-time dynamic pricing pipeline using Apache Kafka and Apache Flink with watermark handling for out-of-order events. Implemented Kafka Saga pattern for distributed transactions across payment (Stripe) and booking services. Designed CQRS architecture with GraphQL (Netflix DGS), gRPC, and Kafka. Deployed on Kubernetes.
+  \item Built and deployed a multi-agent RAG platform from zero to production on AWS in 8 days (143 commits, 3 hosting pivots). Retrieval pipeline combines Qdrant dense + Supabase BM25 sparse search with Cohere Rerank, feeding a LangGraph agent loop with Self-RAG hallucination gating. Integrated Langfuse tracing; real-time SSE streaming of agent state to Next.js 15 frontend. Runs on a \$15/month t3.small via Terraform IaC.
 \end{itemize}
 
 % Skills
