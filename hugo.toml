@@ -41,19 +41,19 @@ url = "https://www.linkedin.com/in/vibhor-kashmira-1b875689/"
 languageName = ":uk:"
 
 [[languages.en.menu.main]]
-name = "Experience @ Sprinklr"
-weight = 1
-url = "sprinklr/"
-
-[[languages.en.menu.main]]
 name = "Project Rentaroost"
-weight = 2
+weight = 1
 url = "rentaroost/"
 
 [[languages.en.menu.main]]
 name = "Resume"
-weight = 3
+weight = 2
 url = "docs/vibhor_kashmira_resume.pdf"
+
+[[languages.en.menu.main]]
+name = "Project Nexus"
+weight = 3
+url = "nexus/"
 
 [[languages.en.menu.main]]
 name = "Contact"
