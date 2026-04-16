@@ -10,9 +10,9 @@ contentDir = "content"
 
 [params]
 author = "Vibhor Kashmira"
-description = "Vibhor Kashmira is a Fullstack Software Engineer specializing in event-driven backend systems, data-intensive applications, and frontend performance optimization."
-keywords = "Vibhor Kashmira, Fullstack Engineer, Backend Developer, Applied AI Engineer, AWS EKS, Kafka, GraphQL, Spring Boot, React"
-info = ["Applied AI Engineer & Fullstack Developer specializing in Agentic RAG ecosystems, event-driven backend architectures, and high-performance React UIs."]
+description = "Fullstack engineer specializing in event-driven backend systems, data-intensive applications, and frontend performance optimization."
+keywords = "Vibhor Kashmira, Fullstack Engineer, Backend Developer, Applied AI Engineer, AWS EKS, Kafka, GraphQL, Spring Boot, React, Next.js"
+info = ["Fullstack engineer specializing in event-driven backend systems, data-intensive applications, and frontend performance optimization."]
 avatarURL = "images/bevis.png"
 dateFormat = "January 2, 2006"
 since = 2019
@@ -41,9 +41,9 @@ url = "https://www.linkedin.com/in/vibhor-kashmira-1b875689/"
 languageName = ":uk:"
 
 [[languages.en.menu.main]]
-name = "Project Nexus"
+name = "Experience @ Sprinklr"
 weight = 1
-url = "nexus/"
+url = "sprinklr/"
 
 [[languages.en.menu.main]]
 name = "Project Rentaroost"
