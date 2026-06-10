@@ -100,6 +100,8 @@ The **Validator agent** uses a structured `Self-RAG` pipeline to ensure every cl
 - **Hallucination Score ≤ 0.5** → Response passes with a `WARNING` badge.
 - Technical failures in validation default to **Fail-Closed** (Unsafe).
 
+{{< figure src="/mypage/images/nexus/grounding-layer.png" title="The Intelligent Grounding Layer — real-time evaluation of faithfulness, relevance, and citation logic." >}}
+
 {{< figure src="/mypage/images/nexus/knowledge-base.png" title="The Automated Knowledge Hub — document ingestion with SimHash deduplication." >}}
 
 ---

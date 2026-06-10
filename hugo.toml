@@ -46,11 +46,6 @@ weight = 1
 url = "rentaroost/"
 
 [[languages.en.menu.main]]
-name = "Resume"
-weight = 2
-url = "docs/vibhor_kashmira_resume.pdf"
-
-[[languages.en.menu.main]]
 name = "Project Nexus"
 weight = 3
 url = "nexus/"
