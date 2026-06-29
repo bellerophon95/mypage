@@ -1,64 +1,392 @@
-<!doctype html><html lang=en><head><title>Project Rentaroost · Vibhor Kashmira</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Vibhor Kashmira"><meta name=description content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence."><meta name=keywords content="Vibhor Kashmira,Fullstack Engineer,Backend Developer,Applied AI Engineer,AWS EKS,Kafka,GraphQL,Spring Boot,React,Next.js"><meta name=twitter:card content="summary"><meta name=twitter:title content="Project Rentaroost"><meta name=twitter:description content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence."><meta property="og:url" content="https://bellerophon95.github.io/mypage/rentaroost/"><meta property="og:site_name" content="Vibhor Kashmira"><meta property="og:title" content="Project Rentaroost"><meta property="og:description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:published_time" content="2024-07-31T16:29:49+05:30"><meta property="article:modified_time" content="2024-07-31T16:29:49+05:30"><link rel=canonical href=https://bellerophon95.github.io/mypage/rentaroost/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/mypage/css/coder.min.0ab58f0bc42b4f21bff7ac349245f3c5579ad3c46dee51b49ad860d174431d73.css integrity="sha256-CrWPC8QrTyG/96w0kkXzxVea08Rt7lG0mthg0XRDHXM=" crossorigin=anonymous media=screen><link rel=stylesheet href=/mypage/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/mypage/scss/custom.min.e978d2de7e1093398bb056146e83c8af52210f97f928c998f442638cac6982ac.css integrity="sha256-6XjS3n4QkzmLsFYUboPIr1IhD5f5KMmY9EJjjKxpgqw=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5><script type=module>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Project Rentaroost · Vibhor Kashmira
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Vibhor Kashmira">
+<meta name="description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence.">
+<meta name="keywords" content="Vibhor Kashmira, Fullstack Engineer, Backend Developer, Applied AI Engineer, AWS EKS, Kafka, GraphQL, Spring Boot, React, Next.js">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Project Rentaroost">
+  <meta name="twitter:description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence.">
+
+<meta property="og:url" content="https://bellerophon95.github.io/mypage/rentaroost/">
+  <meta property="og:site_name" content="Vibhor Kashmira">
+  <meta property="og:title" content="Project Rentaroost">
+  <meta property="og:description" content="A production-grade reactive microservices platform for rental transactions, featuring Kafka choreography and Flink pricing intelligence.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-07-31T16:29:49+05:30">
+    <meta property="article:modified_time" content="2024-07-31T16:29:49+05:30">
+
+
+
+
+<link rel="canonical" href="https://bellerophon95.github.io/mypage/rentaroost/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/mypage/css/coder.min.0ab58f0bc42b4f21bff7ac349245f3c5579ad3c46dee51b49ad860d174431d73.css" integrity="sha256-CrWPC8QrTyG/96w0kkXzxVea08Rt7lG0mthg0XRDHXM=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/mypage/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+  
+  
+    
+    <link rel="stylesheet" href="/mypage/scss/custom.min.e978d2de7e1093398bb056146e83c8af52210f97f928c998f442638cac6982ac.css" integrity="sha256-6XjS3n4QkzmLsFYUboPIr1IhD5f5KMmY9EJjjKxpgqw=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+<script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true, theme: 'dark' });
-</script></head><body class="preload-transitions colorscheme-dark"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://bellerophon95.github.io/mypage/>Vibhor Kashmira
-</a><input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/mypage/rentaroost/>Project Rentaroost</a></li><li class=navigation-item><a class=navigation-link href=/mypage/nexus/>Project Nexus</a></li><li class=navigation-item><a class=navigation-link href=/mypage/contact/>Contact</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://bellerophon95.github.io/mypage/rentaroost/>Project Rentaroost</a></h1></header><blockquote><p><strong><a href=https://github.com/bellerophon95/rentaroost class=external-link target=_blank rel=noopener>📁 View Source</a></strong></p></blockquote><hr><h2 id=high-performance-event-driven-real-estate-ecosystem>High-Performance Event-Driven Real Estate Ecosystem
-<a class=heading-link href=#high-performance-event-driven-real-estate-ecosystem><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Rentaroost is a specialized microservices platform designed for high-concurrency rental transactions. Moving beyond simple CRUD, it implements a <strong>Choreographed Saga Pattern</strong> for distributed consistency and utilizes <strong>Apache Flink</strong> for real-time pricing intelligence based on live demand signals.</p><h2 id=full-system-topology>Full System Topology
-<a class=heading-link href=#full-system-topology><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>The ecosystem consists of 9 specialized services communicating via gRPC for synchronous retrieval and Kafka for asynchronous choreography.</p><div class=mermaid>graph LR
-Client["Client (Next.js)"] --> GW["Gateway :6500"]
-Client --> GQL["GraphQL (DGS) :8185"]
-GW --> LS["Listings :8085"]
-GW --> BS["Booking :8380"]
-GW --> DPS["Dynamic Pricing :8281"]
-GQL -->|gRPC| LS
-GQL -->|gRPC| BS
-GQL -->|gRPC| PS["Payments :4242"]
-BS -->|gRPC| PS
-BS -->|"user.payment.initiated"| Kafka
-PS -->|"user.payment.confirmed / failed"| Kafka
-LS -->|"user.listings.view"| Kafka
-BS -->|"user.booking.confirmed"| Kafka
-DPS -->|"dynamicpricing.update"| Kafka
-Kafka -->|"dynamicpricing.update"| Flink["Flink Job"]
-Flink -->|"dynamicpricing.output"| Kafka
-Kafka -->|"dynamicpricing.output"| DPS
-DPS --> Redis["Redis (Price Cache)"]
-LS --> MongoDB[(MongoDB)]
-BS --> MongoDB
-PS --> Stripe["Stripe API"]
-PNS["Push Notif :6700"] --> FCM["Firebase (FCM)"]
-subgraph Discovery
-Eureka["Eureka :8761"]
-end</div><hr><h2 id=core-engineering-achievements>Core Engineering Achievements
-<a class=heading-link href=#core-engineering-achievements><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><table><thead><tr><th>Layer</th><th>Technical Implementation</th><th>Impact</th></tr></thead><tbody><tr><td><strong>API Layer</strong></td><td>GraphQL (DGS) + gRPC</td><td>Polyglot API: Typed Graph queries for external consumers; high-speed binary gRPC for internal reads.</td></tr><tr><td><strong>Consistency</strong></td><td>Kafka Choreography</td><td>Decoupled Saga flow managing payments and bookings without a central orchestrator bottleneck.</td></tr><tr><td><strong>Intelligence</strong></td><td>Apache Flink</td><td>Real-time demand-sensing using 30-minute sliding event-time windows and out-of-order watermark handling.</td></tr><tr><td><strong>Persistence</strong></td><td>Reactive MongoDB</td><td>Non-blocking data access for property and booking metadata.</td></tr><tr><td><strong>Edge Logic</strong></td><td>Spring Cloud Gateway</td><td>Aggregated routing and dynamic pricing proxies for front-end consumers.</td></tr></tbody></table><hr><h2 id=deep-dive-kafka-event-choreography>Deep Dive: Kafka Event Choreography
-<a class=heading-link href=#deep-dive-kafka-event-choreography><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Unlike traditional centralized orchestration, Rentaroost uses <strong>Choreography</strong>. Each service reacts independently to events on the Kafka bus, ensuring higher scalability and looser coupling.</p><p><strong>Key Flow: Booking & Payment Consistency</strong></p><ol><li><strong>Booking Service</strong> emits <code>user.payment.initiated</code>.</li><li><strong>Payment Service</strong> consumes event, calls Stripe API, and emits <code>user.payment.confirmed</code>.</li><li><strong>Booking Service</strong> finalizes state and triggers FCM push notifications.</li></ol><div class=mermaid>sequenceDiagram
-participant C as Client
-participant GQL as GraphQL (DGS)
-participant BS as Booking Service
-participant K as Kafka
-participant PS as Payments Service
-participant S as Stripe API
-C->>GQL: createBooking mutation
-GQL->>BS: gRPC CreateBooking
-BS->>K: Produce "user.payment.initiated"
-K->>PS: Consume "user.payment.initiated"
-PS->>S: PaymentIntent.create() + confirm()
-alt Success
-S-->>PS: PaymentIntent confirmed
-PS->>K: Produce "user.payment.confirmed"
-else Failure
-S-->>PS: StripeException
-PS->>K: Produce "user.payment.failed"
-end</div><hr><h2 id=deep-dive-flink-dynamic-pricing-engine>Deep Dive: Flink Dynamic Pricing Engine
-<a class=heading-link href=#deep-dive-flink-dynamic-pricing-engine><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>The system uses <strong>Apache Flink</strong> to compute real-time price adjustments based on demand signals. This is a legitimate data engineering pipeline, not just a backend calculation.</p><ul><li><strong>Deduplication</strong>: Per-window deduping by <code>userID + eventType</code> to prevent price manipulation.</li><li><strong>Algorithm State</strong>:<ul><li><code>Booking_Impact</code>: +10% multiplier per unique booking event.</li><li><code>View_Impact</code>: +5% multiplier per unique view event.</li></ul></li><li><strong>Consistency</strong>: 30-second bounded out-of-orderness watermarks ensure late-arriving events are correctly calculated before the 1-minute slide triggers.</li><li><strong>Caching</strong>: Results are pushed to <strong>Redis</strong> with a 30-minute rolling TTL, ensuring the &ldquo;hot&rdquo; demand price decays back to base price automatically.</li></ul><hr><h2 id=infrastructure>Infrastructure
-<a class=heading-link href=#infrastructure><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>The architecture is designed for <strong>cloud-native scalability</strong>. While the repo provides a complete <code>docker-compose.yaml</code> for local development (including Zookeeper, Kafka, and Flink), the production design targets managed services like Confluent and Managed Flink to handle industrial-scale rental traffic.</p><p>For a deeper look into the implementation, visit the <a href=https://github.com/bellerophon95/rentaroost class=external-link target=_blank rel=noopener><strong>GitHub Repository</strong></a>.</p></article></section></div><footer class=footer><section class=container>©
-2019 -
-2026
-Vibhor Kashmira</section></footer></main><script src=/mypage/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>
+</script>
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-dark">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://bellerophon95.github.io/mypage/">
+      Vibhor Kashmira
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/mypage/rentaroost/">Project Rentaroost</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/mypage/docs/vibhor_kashmira_resume.pdf">Resume</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/mypage/nexus/">Project Nexus</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/mypage/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://bellerophon95.github.io/mypage/rentaroost/">
+          Project Rentaroost
+        </a>
+      </h1>
+    </header>
+
+    <blockquote>
+<p><strong><a href="https://github.com/bellerophon95/rentaroost"  class="external-link" target="_blank" rel="noopener">📁 View Source</a></strong></p>
+</blockquote>
+<hr>
+<h2 id="high-performance-event-driven-real-estate-ecosystem">
+  High-Performance Event-Driven Real Estate Ecosystem
+  <a class="heading-link" href="#high-performance-event-driven-real-estate-ecosystem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Rentaroost is a specialized microservices platform designed for high-concurrency rental transactions. Moving beyond simple CRUD, it implements a <strong>Choreographed Saga Pattern</strong> for distributed consistency and utilizes <strong>Apache Flink</strong> for real-time pricing intelligence based on live demand signals.</p>
+<h2 id="full-system-topology">
+  Full System Topology
+  <a class="heading-link" href="#full-system-topology">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The ecosystem consists of 9 specialized services communicating via gRPC for synchronous retrieval and Kafka for asynchronous choreography.</p>
+<div class="mermaid">graph LR
+    Client["Client (Next.js)"] --> GW["Gateway :6500"]
+    Client --> GQL["GraphQL (DGS) :8185"]
+    
+    GW --> LS["Listings :8085"]
+    GW --> BS["Booking :8380"]
+    GW --> DPS["Dynamic Pricing :8281"]
+    
+    GQL -->|gRPC| LS
+    GQL -->|gRPC| BS
+    GQL -->|gRPC| PS["Payments :4242"]
+    
+    BS -->|gRPC| PS
+    
+    BS -->|"user.payment.initiated"| Kafka
+    PS -->|"user.payment.confirmed / failed"| Kafka
+    LS -->|"user.listings.view"| Kafka
+    BS -->|"user.booking.confirmed"| Kafka
+    
+    DPS -->|"dynamicpricing.update"| Kafka
+    Kafka -->|"dynamicpricing.update"| Flink["Flink Job"]
+    Flink -->|"dynamicpricing.output"| Kafka
+    Kafka -->|"dynamicpricing.output"| DPS
+    
+    DPS --> Redis["Redis (Price Cache)"]
+    LS --> MongoDB[(MongoDB)]
+    BS --> MongoDB
+    
+    PS --> Stripe["Stripe API"]
+    PNS["Push Notif :6700"] --> FCM["Firebase (FCM)"]
+    
+    subgraph Discovery
+      Eureka["Eureka :8761"]
+    end</div>
+<hr>
+<h2 id="core-engineering-achievements">
+  Core Engineering Achievements
+  <a class="heading-link" href="#core-engineering-achievements">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Technical Implementation</th>
+          <th>Impact</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>API Layer</strong></td>
+          <td>GraphQL (DGS) + gRPC</td>
+          <td>Polyglot API: Typed Graph queries for external consumers; high-speed binary gRPC for internal reads.</td>
+      </tr>
+      <tr>
+          <td><strong>Consistency</strong></td>
+          <td>Kafka Choreography</td>
+          <td>Decoupled Saga flow managing payments and bookings without a central orchestrator bottleneck.</td>
+      </tr>
+      <tr>
+          <td><strong>Intelligence</strong></td>
+          <td>Apache Flink</td>
+          <td>Real-time demand-sensing using 30-minute sliding event-time windows and out-of-order watermark handling.</td>
+      </tr>
+      <tr>
+          <td><strong>Persistence</strong></td>
+          <td>Reactive MongoDB</td>
+          <td>Non-blocking data access for property and booking metadata.</td>
+      </tr>
+      <tr>
+          <td><strong>Edge Logic</strong></td>
+          <td>Spring Cloud Gateway</td>
+          <td>Aggregated routing and dynamic pricing proxies for front-end consumers.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="deep-dive-kafka-event-choreography">
+  Deep Dive: Kafka Event Choreography
+  <a class="heading-link" href="#deep-dive-kafka-event-choreography">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Unlike traditional centralized orchestration, Rentaroost uses <strong>Choreography</strong>. Each service reacts independently to events on the Kafka bus, ensuring higher scalability and looser coupling.</p>
+<p><strong>Key Flow: Booking &amp; Payment Consistency</strong></p>
+<ol>
+<li><strong>Booking Service</strong> emits <code>user.payment.initiated</code>.</li>
+<li><strong>Payment Service</strong> consumes event, calls Stripe API, and emits <code>user.payment.confirmed</code>.</li>
+<li><strong>Booking Service</strong> finalizes state and triggers FCM push notifications.</li>
+</ol>
+<div class="mermaid">sequenceDiagram
+    participant C as Client
+    participant GQL as GraphQL (DGS)
+    participant BS as Booking Service
+    participant K as Kafka
+    participant PS as Payments Service
+    participant S as Stripe API
+    
+    C->>GQL: createBooking mutation
+    GQL->>BS: gRPC CreateBooking
+    BS->>K: Produce "user.payment.initiated"
+    K->>PS: Consume "user.payment.initiated"
+    PS->>S: PaymentIntent.create() + confirm()
+    alt Success
+        S-->>PS: PaymentIntent confirmed
+        PS->>K: Produce "user.payment.confirmed"
+    else Failure
+        S-->>PS: StripeException
+        PS->>K: Produce "user.payment.failed"
+    end</div>
+<hr>
+<h2 id="deep-dive-flink-dynamic-pricing-engine">
+  Deep Dive: Flink Dynamic Pricing Engine
+  <a class="heading-link" href="#deep-dive-flink-dynamic-pricing-engine">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The system uses <strong>Apache Flink</strong> to compute real-time price adjustments based on demand signals. This is a legitimate data engineering pipeline, not just a backend calculation.</p>
+<ul>
+<li><strong>Deduplication</strong>: Per-window deduping by <code>userID + eventType</code> to prevent price manipulation.</li>
+<li><strong>Algorithm State</strong>:
+<ul>
+<li><code>Booking_Impact</code>: +10% multiplier per unique booking event.</li>
+<li><code>View_Impact</code>: +5% multiplier per unique view event.</li>
+</ul>
+</li>
+<li><strong>Consistency</strong>: 30-second bounded out-of-orderness watermarks ensure late-arriving events are correctly calculated before the 1-minute slide triggers.</li>
+<li><strong>Caching</strong>: Results are pushed to <strong>Redis</strong> with a 30-minute rolling TTL, ensuring the &ldquo;hot&rdquo; demand price decays back to base price automatically.</li>
+</ul>
+<hr>
+<h2 id="infrastructure">
+  Infrastructure
+  <a class="heading-link" href="#infrastructure">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The architecture is designed for <strong>cloud-native scalability</strong>. While the repo provides a complete <code>docker-compose.yaml</code> for local development (including Zookeeper, Kafka, and Flink), the production design targets managed services like Confluent and Managed Flink to handle industrial-scale rental traffic.</p>
+<p>For a deeper look into the implementation, visit the <a href="https://github.com/bellerophon95/rentaroost"  class="external-link" target="_blank" rel="noopener"><strong>GitHub Repository</strong></a>.</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2026
+     Vibhor Kashmira 
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/mypage/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
